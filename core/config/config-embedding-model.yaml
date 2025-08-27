@@ -1,0 +1,12 @@
+preferred_provider: openai
+
+providers:
+  openai:
+    api_key_env: OPENAI_API_KEY
+    api_endpoint_env: OPENAI_ENDPOINT
+    model: text-embedding-3-small
+
+  huggingFace:
+    api_key_env: HF_API_KEY
+    model: Jinaai/jina-embeddings-v4
+    dimensions: 2048

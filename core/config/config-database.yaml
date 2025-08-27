@@ -1,0 +1,26 @@
+write_endpoint: "qdrant"
+
+endpoints:
+  qdrant:
+  
+    db_type: "qdrant"
+
+    api_endpoint_env: "QDRANT_URL"
+
+    index_name: "web_vectors"
+
+    enabled: false
+
+  pgvector:
+    # Type of the database.
+    db_type: "pgvector"
+
+    # Environment variable for the PostgreSQL connection string.
+    # Example: "postgresql://user:password@host:port/dbname"
+    api_endpoint_env: "POSTGRES_CONNECTION_STRING"
+
+    # Default table name for pgvector.
+    index_name: "web_vectors"
+
+    # Enable or disable this endpoint.
+    enabled: true

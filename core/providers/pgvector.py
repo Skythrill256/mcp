@@ -1,0 +1,251 @@
+"""
+Vector storage functionality using PostgreSQL with pgvector extension.
+"""
+
+import logging
+from typing import Any, Optional
+ 
+
+from sqlalchemy.engine.url import make_url
+
+from sqlalchemy.ext.asyncio import create_async_engine
+
+try:
+    import sqlalchemy
+    from llama_index.vector_stores.postgres import PGVectorStore
+except ImportError:
+    raise ImportError(
+        "pgvector dependencies are required. Install with: pip install sqlalchemy psycopg2-binary llama-index-vector-stores-postgres"
+    ) from None
+
+from core.config.settings import AppSettings
+from core.embeddings.embedding import EmbeddingResult
+from core.errors.exceptions import StorageError
+from core.providers.vector_store import VectorStoreProvider
+
+logger = logging.getLogger(__name__)
+
+
+
+class PgVectorStoreProvider(VectorStoreProvider):
+    """Manages vector storage operations with PostgreSQL/pgvector."""
+
+    def __init__(self, config: AppSettings):
+        super().__init__(config)
+        self.connection_string = config.postgres_connection_string
+        self.table_name = config.collection_name
+        self._vector_store: Optional[PGVectorStore] = None
+
+        # Validate connection string early
+        if not isinstance(self.connection_string, str) or not self.connection_string.strip():
+            raise StorageError(
+                "POSTGRES_CONNECTION_STRING environment variable is not set or empty. "
+                "Please set it to a valid PostgreSQL connection string, e.g., "
+                "'postgresql://user:password@host:port/dbname'."
+            )
+        try:
+            # Try to parse the URL to give an early, clear error
+            parsed = make_url(self.connection_string)
+        except Exception as e:
+            # Mask password when reporting back
+            try:
+                s = str(self.connection_string)
+                masked = s
+                if ":" in s and "@" in s:
+                    # Simple mask: hide between : and @ (password)
+                    before, after = s.split("@", 1)
+                    if ":" in before:
+                        userpart = before.split(":", 1)[0]
+                        masked = f"{userpart}:*****@{after}"
+            except Exception:
+                masked = "<redacted>"
+            raise StorageError(
+                f"Invalid POSTGRES_CONNECTION_STRING (masked): {masked}. "
+                f"Error: {e}. Original cause: {e.__cause__}. Expected format: 'postgresql://user:password@host:port/dbname'."
+            ) from e
+    @property
+    def vector_store(self) -> PGVectorStore:
+        if self._vector_store is None:
+            # Create SQLAlchemy engine
+            engine = sqlalchemy.create_engine(
+                self.connection_string
+            )
+            # Create SQLAlchemy async engine
+            async_engine = create_async_engine(
+                self.connection_string.replace("postgresql://", "postgresql+asyncpg://")
+            )
+            self._vector_store = PGVectorStore(
+                engine=engine,
+                async_engine=async_engine,
+                table_name=self.table_name,
+                embed_dim=self.config.embedding_dimensions,
+            )
+        return self._vector_store
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        return None
+
+    async def create_collection(self, recreate: bool = False) -> bool:
+        """Create or recreate the table used for storing vectors.
+
+        Prefers to use the PGVectorStore internal metadata table when present.
+        Falls back to creating the `vector` extension and a minimal SQL table.
+        """
+        try:
+            engine = sqlalchemy.create_engine(self.connection_string)
+            with engine.begin() as conn:
+                inspector = sqlalchemy.inspect(engine)
+                if inspector.has_table(self.table_name):
+                    if recreate:
+                        logger.info(f"Deleting existing table: {self.table_name}")
+                        if hasattr(self.vector_store, "_metadata_table"):
+                            try:
+                                self.vector_store._metadata_table.drop(bind=conn)
+                            except Exception:
+                                conn.execute(sqlalchemy.text(f"DROP TABLE IF EXISTS {self.table_name} CASCADE"))
+                        else:
+                            conn.execute(sqlalchemy.text(f"DROP TABLE IF EXISTS {self.table_name} CASCADE"))
+                    else:
+                        logger.info(f"Table {self.table_name} already exists")
+                        return False
+
+                logger.info(f"Creating table: {self.table_name}")
+
+                # Try to create pgvector extension if possible (graceful if not permitted)
+                try:
+                    conn.execute(sqlalchemy.text("CREATE EXTENSION IF NOT EXISTS vector"))
+                except Exception as ee:
+                    logger.debug(f"Could not create pgvector extension automatically: {ee}")
+
+                # Use PGVectorStore internals when available
+                if hasattr(self.vector_store, "_metadata_table"):
+                    try:
+                        self.vector_store._metadata_table.create(bind=conn)
+                        logger.info(f"Successfully created table via PGVectorStore internals: {self.table_name}")
+                        return True
+                    except Exception as e:
+                        logger.warning(f"PGVectorStore internal creation failed, falling back to SQL: {e}")
+
+                # Fallback: create a minimal table using the native `vector` type
+                try:
+                    create_sql = (
+                        f"CREATE TABLE IF NOT EXISTS {self.table_name} ("
+                        f"id SERIAL PRIMARY KEY, "
+                        f"embedding vector({self.config.embedding_dimensions}), "
+                        f"metadata jsonb" 
+                        f");"
+                    )
+                    conn.execute(sqlalchemy.text(create_sql))
+                    logger.info(f"Successfully created table via SQL: {self.table_name}")
+                    return True
+                except Exception as e:
+                    logger.error(f"Error creating table via SQL: {e}")
+                    # Provide a helpful message when the vector type is missing
+                    if "type \"vector\" does not exist" in str(e) or "does not exist" in str(e):
+                        raise StorageError(
+                            "Postgres 'vector' type is missing. Ensure the 'pgvector' extension is installed on the database and the user has permission to create extensions, or create the extension manually: CREATE EXTENSION pgvector;"
+                        ) from e
+                    raise StorageError(f"Failed to create table: {e}") from e
+
+        except Exception as e:
+            logger.error(f"Error creating table: {e}")
+            raise StorageError(f"Failed to create table: {e}") from e
+
+    async def store_embeddings(self, embeddings: list[EmbeddingResult]) -> int:
+        if not embeddings:
+            logger.warning("No embeddings to store")
+            return 0
+
+        try:
+            await self.create_collection(recreate=False)
+
+            # Convert embeddings to LlamaIndex nodes and add
+            nodes = [emb.to_node() for emb in embeddings]
+            await self.vector_store.async_add(nodes)
+
+            logger.info(f"Successfully stored {len(nodes)} embeddings")
+            return len(nodes)
+
+        except Exception as e:
+            logger.error(f"Error storing embeddings: {e}")
+            raise StorageError(f"Failed to store embeddings: {e}") from e
+
+    async def search_similar(
+        self,
+        query_embedding: list[float],
+        limit: int = 10,
+        score_threshold: float = 0.7,
+        filters: Optional[dict[str, Any]] = None,
+    ) -> list[dict[str, Any]]:
+        try:
+            from llama_index.core.vector_stores import VectorStoreQuery
+            query = VectorStoreQuery(
+                query_embedding=query_embedding,
+                similarity_top_k=limit,
+                mode="default",
+            )
+            results = self.vector_store.query(query)
+
+            formatted_results: list[dict[str, Any]] = []
+            if results.nodes:
+                for node, similarity in zip(results.nodes, results.similarities or []):
+                    if similarity >= score_threshold:
+                        formatted_results.append({
+                            'id': node.node_id,
+                            'score': similarity,
+                            'text': node.get_content(),
+                            'metadata': node.metadata,
+                            'url': node.metadata.get('url', ''),
+                            'title': node.metadata.get('title', ''),
+                        })
+            logger.info(f"Found {len(formatted_results)} similar results")
+            return formatted_results
+
+        except Exception as e:
+            logger.error(f"Error searching vectors: {e}")
+            raise StorageError(f"Failed to search vectors: {e}") from e
+
+    async def get_collection_info(self) -> dict[str, Any]:
+        try:
+            engine = sqlalchemy.create_engine(self.connection_string)
+            with engine.connect() as conn:
+                count = conn.execute(sqlalchemy.text(f"SELECT COUNT(*) FROM {self.table_name}")).scalar_one()
+            return {
+                'name': self.table_name,
+                'points_count': int(count),
+            }
+        except Exception as e:
+            logger.error(f"Error getting table info: {e}")
+            raise StorageError(f"Failed to get table info: {e}") from e
+
+    async def delete_collection(self) -> bool:
+        try:
+            engine = sqlalchemy.create_engine(self.connection_string)
+            with engine.begin() as conn:
+                if hasattr(self.vector_store, "_metadata_table"):
+                    try:
+                        self.vector_store._metadata_table.drop(bind=conn, checkfirst=True)
+                        logger.info(f"Successfully deleted table via metadata: {self.table_name}")
+                        return True
+                    except Exception:
+                        conn.execute(sqlalchemy.text(f"DROP TABLE IF EXISTS {self.table_name} CASCADE"))
+                        logger.info(f"Successfully deleted table via SQL: {self.table_name}")
+                        return True
+                else:
+                    conn.execute(sqlalchemy.text(f"DROP TABLE IF EXISTS {self.table_name} CASCADE"))
+                    logger.info(f"Successfully deleted table via SQL: {self.table_name}")
+                    return True
+        except Exception as e:
+            logger.error(f"Error deleting table: {e}")
+            raise StorageError(f"Failed to delete table: {e}") from e
+
+    async def count_points(self, filters: Optional[dict[str, Any]] = None) -> int:
+        try:
+            info = await self.get_collection_info()
+            return info.get('points_count', 0)
+        except Exception as e:
+            logger.error(f"Error counting points: {e}")
+            raise StorageError(f"Failed to count points: {e}") from e
