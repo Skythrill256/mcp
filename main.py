@@ -6,11 +6,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from core.config.settings import AppSettings
-from core.logging import configure_logging
+from core import configure_logging, info
 
 # Configure logging
 settings = AppSettings()
 configure_logging(settings)
+
+info("Starting web ingestion application")
 
 from fastapi import FastAPI, HTTPException
 
@@ -22,16 +24,21 @@ app = FastAPI(title="Web Ingestion + MCP Spawner", version="1.0.0")
 
 @app.get("/healthz")
 async def healthz():
+    info("Health check requested")
     return {"status": "ok"}
 
 
 @app.post("/ingest", response_model=IngestResponse)
 async def ingest(req: IngestRequest):
+    info(f"Ingestion request received for URL: {req.url}")
     base_cfg = AppSettings.from_yaml("core/config/config-embedding-model.yaml")
     service = IngestionService(base_cfg)
     try:
-        return await service.ingest(req)
+        result = await service.ingest(req)
+        info(f"Ingestion completed successfully for URL: {req.url}")
+        return result
     except Exception as e:
+        info(f"Ingestion failed for URL: {req.url} with error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

@@ -32,6 +32,7 @@ dependencies = [
     "sentence-transformers>=5.1.0",
     "cohere>=5.17.0",
     "llama-index-embeddings-huggingface>=0.6.0",
+    "loguru>=0.7.3",
 ]
 
 [project.optional-dependencies]

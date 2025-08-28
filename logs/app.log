@@ -1,0 +1,32 @@
+2025-08-28 10:03:04.051 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-08-28 10:03:18.152 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-08-28 10:03:22.008 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-08-28 10:03:22.008 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-08-28 10:03:24.563 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-08-28 10:03:25.150 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-08-28 10:03:25.273 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-08-28 10:03:25.275 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-08-28 10:03:25.275 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-08-28 10:03:25.275 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-08-28 10:03:25.890 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-08-28 10:03:25.894 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-08-28 10:03:25.895 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-28 10:03:31.229 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-08-28 10:03:43.111 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-08-28 10:03:43.814 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-08-28 10:03:44.939 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-08-28 10:03:45.367 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-08-28 10:03:45.490 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-08-28 10:03:45.491 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-08-28 10:03:55.238 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-08-28 10:04:16.358 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-08-28 10:04:16.479 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-28 10:04:23.335 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-08-28 10:04:23.343 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-08-28 10:04:23.365 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-08-28 10:05:04.825 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 37af788a33c34b8796cc9fc5e7ab535f
+2025-08-28 10:05:07.248 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-08-28 10:05:14.675 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-08-28 10:05:14.692 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-08-28 10:05:14.692 | INFO     | logging:callHandlers:1737 - Processing query: tell about anjishnu
+2025-08-28 10:05:14.743 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'

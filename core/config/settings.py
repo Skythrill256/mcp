@@ -37,7 +37,7 @@ class AppSettings(BaseModel):
 
     # Logging
     log_level: str = Field(default="INFO")
-    log_file: Optional[str] = Field(default=None)
+    log_file: Optional[str] = Field(default="logs/app.log")
 
     def for_site(self, url: str, collection_prefix: str = "site") -> "AppSettings":
         """Return a copy with a namespaced collection name derived from the URL host."""
