@@ -1,4 +1,4 @@
-preferred_provider: openai
+preferred_provider: huggingFace
 
 providers:
   openai:
@@ -8,5 +8,5 @@ providers:
 
   huggingFace:
     api_key_env: HF_API_KEY
-    model: Jinaai/jina-embeddings-v4
-    dimensions: 2048
+    model: all-MiniLM-L6-v2
+    dimensions: 384

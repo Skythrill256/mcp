@@ -23,6 +23,7 @@ class AppSettings(BaseModel):
     chunk_overlap: int = Field(default=100)
     openai_api_key: Optional[str] = Field(default=os.getenv("OPENAI_API_KEY"))
     huggingface_api_key: Optional[str] = Field(default=os.getenv("HF_API_KEY"))
+    cohere_api_key: Optional[str] = Field(default=os.getenv("COHERE_API_KEY"))
 
     # Scraping/deep crawling
     keywords: List[str] = Field(default_factory=list)
@@ -70,6 +71,15 @@ class AppSettings(BaseModel):
             except (TypeError, ValueError):
                 # ignore invalid value and fall back to model default
                 pass
+        else:
+            # Set default dimensions based on model if not specified
+            model_name = provider_config.get("model", "")
+            if "jina-embeddings-v4" in model_name:
+                kwargs["embedding_dimensions"] = 2048
+            elif "all-mpnet-base-v2" in model_name:
+                kwargs["embedding_dimensions"] = 3072
+            elif "all-MiniLM-L6-v2" in model_name:
+                kwargs["embedding_dimensions"] = 384
 
         openai_env = providers_cfg.get("openai", {}).get("api_key_env")
         hugging_env = providers_cfg.get("huggingFace", {}).get("api_key_env")

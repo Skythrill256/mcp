@@ -66,17 +66,36 @@ class PgVectorStoreProvider(VectorStoreProvider):
     @property
     def vector_store(self) -> PGVectorStore:
         if self._vector_store is None:
-            # Create SQLAlchemy engine
-            engine = sqlalchemy.create_engine(
-                self.connection_string
-            )
-            # Create SQLAlchemy async engine
-            async_engine = create_async_engine(
-                self.connection_string.replace("postgresql://", "postgresql+asyncpg://")
-            )
+            # Process the connection string for asyncpg
+            # Remove sslmode and channel_binding parameters for asyncpg
+            async_connection_string = self.connection_string.replace("postgresql://", "postgresql+asyncpg://")
+            if "asyncpg" in async_connection_string:
+                # asyncpg doesn't support sslmode and channel_binding parameters in the same way
+                # Remove them to prevent the "unexpected keyword argument 'sslmode'" error
+                async_connection_string = async_connection_string.replace("?sslmode=require&channel_binding=require", "")
+                async_connection_string = async_connection_string.replace("&channel_binding=require", "")
+                async_connection_string = async_connection_string.replace("?sslmode=require", "")
+                
+                # Ensure there are no trailing ? characters
+                if async_connection_string.endswith("?"):
+                    async_connection_string = async_connection_string[:-1]
+                
+                # Ensure the connection string has an explicit port to prevent 'None' port issue
+                try:
+                    parsed_url = make_url(async_connection_string)
+                    if parsed_url.port is None:
+                        # Add default PostgreSQL port (5432) if not specified
+                        host_part = f"://{parsed_url.username}:{parsed_url.password}@{parsed_url.host}"
+                        host_with_port = f"://{parsed_url.username}:{parsed_url.password}@{parsed_url.host}:5432"
+                        async_connection_string = async_connection_string.replace(host_part, host_with_port, 1)
+                except Exception:
+                    # If URL parsing fails, proceed with original string
+                    pass
+            
+            # Pass both the original connection string for the sync engine and the processed one for the async engine
             self._vector_store = PGVectorStore(
-                engine=engine,
-                async_engine=async_engine,
+                connection_string=self.connection_string,
+                async_connection_string=async_connection_string,
                 table_name=self.table_name,
                 embed_dim=self.config.embedding_dimensions,
             )

@@ -31,11 +31,11 @@ async def spawn_site_mcp(site_url: str, base_config: AppSettings) -> dict[str, A
     query_engine = LlamaIndexQueryEngine(cfg)
 
     @mcp.tool
-    async def ask(question: str, top_k: int = 5, ctx: Context | None = None) -> dict[str, Any]:
+    async def ask(question: str, top_k: int = 5, use_reranking: bool = True, ctx: Context | None = None) -> dict[str, Any]:
         """Ask questions grounded on the site's embedded content in Qdrant."""
         if ctx:
             await ctx.info(f"Querying vector store for: {question}")
-        return await query_engine.query(question=question, top_k=top_k)
+        return await query_engine.query(question=question, top_k=top_k, use_reranking=use_reranking)
 
     @mcp.tool
     async def ask_metadata(ctx: Context | None = None) -> dict[str, Any]:

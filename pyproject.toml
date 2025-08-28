@@ -30,6 +30,8 @@ dependencies = [
     "sqlalchemy>=2.0.0",
     "psycopg[binary]>=3.1.0",
     "sentence-transformers>=5.1.0",
+    "cohere>=5.17.0",
+    "llama-index-embeddings-huggingface>=0.6.0",
 ]
 
 [project.optional-dependencies]
