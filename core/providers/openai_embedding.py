@@ -8,13 +8,14 @@ import os
 from contextlib import suppress
 from typing import Any
 
-try:
-    # LlamaIndex OpenAI embeddings integration
-    from llama_index.embeddings.openai import OpenAIEmbedding
-except ImportError:
-    raise ImportError(
-        "llama-index-embeddings-openai is required. Install with: pip install llama-index-embeddings-openai"
-    ) from None
+# Third-party imports (kept at top to satisfy import ordering rules)
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.core import Document, Settings
+from llama_index.core.node_parser import SentenceSplitter
+from llama_index.vector_stores.qdrant import QdrantVectorStore
+from llama_index.vector_stores.postgres import PGVectorStore  # type: ignore
+from qdrant_client import QdrantClient
+from qdrant_client.models import Distance, VectorParams
 
 from core.config.settings import AppSettings
 from core.config.database import load_db_settings
@@ -22,36 +23,6 @@ from core.errors.exceptions import EmbeddingError
 from core.providers.embedding import EmbeddingProvider, EmbeddingResult
 
 logger = logging.getLogger(__name__)
-
-# LlamaIndex core and vector store backends
-try:
-    from llama_index.core import (
-        Document,
-        Settings,
-        StorageContext,
-        VectorStoreIndex,
-    )
-    from llama_index.core.node_parser import SentenceSplitter
-    from llama_index.vector_stores.qdrant import QdrantVectorStore
-    from qdrant_client import QdrantClient
-    from qdrant_client.models import Distance, VectorParams
-    # Optional PGVector (Postgres) backend
-    try:
-        from llama_index.vector_stores.postgres import PGVectorStore  # type: ignore
-    except Exception:
-        PGVectorStore = None  # type: ignore
-except ImportError:
-    # Keep lazy import errors until features are used
-    Document = None  # type: ignore
-    StorageContext = None  # type: ignore
-    VectorStoreIndex = None  # type: ignore
-    Settings = None  # type: ignore
-    SentenceSplitter = None  # type: ignore
-    QdrantVectorStore = None  # type: ignore
-    QdrantClient = None  # type: ignore
-    Distance = None  # type: ignore
-    VectorParams = None  # type: ignore
-    PGVectorStore = None  # type: ignore
 
 
 class OpenAIEmbeddingProvider(EmbeddingProvider):
@@ -133,7 +104,7 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
             elif backend in ("postgres", "pgvector"):
                 if PGVectorStore is None:
                     raise ImportError(
-                        "PGVector backend requested but llama-index-vector-stores-postgres is not installed.\n" 
+                        "PGVector backend requested but llama-index-vector-stores-postgres is not installed.\n"
                         "Install with: pip install 'llama-index-vector-stores-postgres' 'psycopg[binary]' sqlalchemy"
                     )
                 conn = db.connection
@@ -150,7 +121,9 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
             else:
                 raise ValueError(f"Unsupported db_type: {backend}")
 
-    async def generate_embeddings(self, scraped_data: list[dict[str, Any]]) -> list[EmbeddingResult]:
+    async def generate_embeddings(
+        self, scraped_data: list[dict[str, Any]]
+    ) -> list[EmbeddingResult]:
         """
         Generate embeddings for scraped content using LlamaIndex's splitter and embedder.
 
@@ -170,10 +143,12 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
             # Build Documents
             documents: list[Document] = []  # type: ignore[assignment]
             for page_data in scraped_data:
-                content = page_data.get('content', '')
-                metadata = page_data.get('metadata', {}) or {}
+                content = page_data.get("content", "")
+                metadata = page_data.get("metadata", {}) or {}
                 if not content.strip():
-                    logger.warning(f"No content found for {metadata.get('url', 'unknown URL')}")
+                    logger.warning(
+                        f"No content found for {metadata.get('url', 'unknown URL')}"
+                    )
                     continue
                 documents.append(Document(text=content, metadata=metadata))  # type: ignore[call-arg]
 
@@ -198,7 +173,10 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
             def _embed_nodes(texts: list[str]) -> list[list[float]]:
                 return [self.embed_model.get_text_embedding(t) for t in texts]
 
-            texts = [n.get_text() if hasattr(n, 'get_text') else getattr(n, 'text', '') for n in nodes]
+            texts = [
+                n.get_text() if hasattr(n, "get_text") else getattr(n, "text", "")
+                for n in nodes
+            ]
             vectors = await asyncio.to_thread(_embed_nodes, texts)
 
             # Assemble EmbeddingResult; compute per-document chunk indices
@@ -206,18 +184,20 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
             doc_counters: dict[str, int] = {}
             for node, vec in zip(nodes, vectors):
                 # Derive a doc key from metadata URL if present, else a generic key
-                meta = getattr(node, 'metadata', {}) or {}
-                doc_key = meta.get('url') or meta.get('source') or 'doc'
+                meta = getattr(node, "metadata", {}) or {}
+                doc_key = meta.get("url") or meta.get("source") or "doc"
                 idx = doc_counters.get(doc_key, 0)
                 doc_counters[doc_key] = idx + 1
 
                 # Build metadata with chunk info
                 merged_meta = dict(meta)
-                merged_meta.update({
-                    'chunk_index': idx,
-                })
+                merged_meta.update(
+                    {
+                        "chunk_index": idx,
+                    }
+                )
 
-                chunk_id = getattr(node, 'node_id', None) or f"{doc_key}_{idx}"
+                chunk_id = getattr(node, "node_id", None) or f"{doc_key}_{idx}"
 
                 embedding_results.append(
                     EmbeddingResult(
@@ -252,7 +232,7 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
         model_dimensions = {
             "text-embedding-3-large": 3072,
             "text-embedding-3-small": 1536,
-            "text-embedding-ada-002": 1536
+            "text-embedding-ada-002": 1536,
         }
 
         if self.config.embedding_model in model_dimensions:

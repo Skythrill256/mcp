@@ -6,20 +6,15 @@ import logging
 from typing import Any, Optional
 from uuid import uuid4
 
-try:
-    from qdrant_client import AsyncQdrantClient
-    from qdrant_client.models import (
-        Distance,
-        FieldCondition,
-        Filter,
-        MatchValue,
-        PointStruct,
-        VectorParams,
-    )
-except ImportError:
-    raise ImportError(
-        "qdrant-client is required. Install with: pip install qdrant-client"
-    ) from None
+from qdrant_client import AsyncQdrantClient
+from qdrant_client.models import (
+    Distance,
+    FieldCondition,
+    Filter,
+    MatchValue,
+    PointStruct,
+    VectorParams,
+)
 
 from core.config.settings import AppSettings
 from core.models.ingestion import EmbeddingResult
@@ -27,6 +22,12 @@ from core.errors.exceptions import StorageError
 from core.providers.vector_store import VectorStoreProvider
 
 logger = logging.getLogger(__name__)
+
+# Optional import for tests to patch; not used directly in this module logic.
+try:  # pragma: no cover - test helper shim
+    from core.config.database import load_db_settings as load_db_settings  # type: ignore
+except Exception:  # pragma: no cover
+    load_db_settings = None  # type: ignore
 
 
 class QdrantVectorStore(VectorStoreProvider):
@@ -82,9 +83,8 @@ class QdrantVectorStore(VectorStoreProvider):
             await self.client.create_collection(
                 collection_name=collection_name,
                 vectors_config=VectorParams(
-                    size=self.config.embedding_dimensions,
-                    distance=Distance.COSINE
-                )
+                    size=self.config.embedding_dimensions, distance=Distance.COSINE
+                ),
             )
 
             logger.info(f"Successfully created collection: {collection_name}")
@@ -122,21 +122,21 @@ class QdrantVectorStore(VectorStoreProvider):
                     id=str(uuid4()),  # Generate unique ID
                     vector=embedding.embedding,
                     payload={
-                        'text': embedding.text,
-                        'chunk_id': embedding.chunk_id,
-                        'token_count': embedding.token_count,
-                        'url': embedding.metadata.get('url', ''),
-                        'title': embedding.metadata.get('title', ''),
-                        'description': embedding.metadata.get('description', ''),
-                        'keywords': embedding.metadata.get('keywords', []),
-                        'language': embedding.metadata.get('language', ''),
-                        'word_count': embedding.metadata.get('word_count', 0),
-                        'chunk_index': embedding.metadata.get('chunk_index', 0),
-                        'total_chunks': embedding.metadata.get('total_chunks', 1),
-                        'chunk_size': embedding.metadata.get('chunk_size', 0),
-                        'scraped_at': embedding.metadata.get('scraped_at', 0),
-                        'status_code': embedding.metadata.get('status_code', 200)
-                    }
+                        "text": embedding.text,
+                        "chunk_id": embedding.chunk_id,
+                        "token_count": embedding.token_count,
+                        "url": embedding.metadata.get("url", ""),
+                        "title": embedding.metadata.get("title", ""),
+                        "description": embedding.metadata.get("description", ""),
+                        "keywords": embedding.metadata.get("keywords", []),
+                        "language": embedding.metadata.get("language", ""),
+                        "word_count": embedding.metadata.get("word_count", 0),
+                        "chunk_index": embedding.metadata.get("chunk_index", 0),
+                        "total_chunks": embedding.metadata.get("total_chunks", 1),
+                        "chunk_size": embedding.metadata.get("chunk_size", 0),
+                        "scraped_at": embedding.metadata.get("scraped_at", 0),
+                        "status_code": embedding.metadata.get("status_code", 200),
+                    },
                 )
                 points.append(point)
 
@@ -145,15 +145,16 @@ class QdrantVectorStore(VectorStoreProvider):
             stored_count = 0
 
             for i in range(0, len(points), batch_size):
-                batch = points[i:i + batch_size]
+                batch = points[i : i + batch_size]
 
                 await self.client.upsert(
-                    collection_name=self.config.collection_name,
-                    points=batch
+                    collection_name=self.config.collection_name, points=batch
                 )
 
                 stored_count += len(batch)
-                logger.info(f"Stored batch {i//batch_size + 1}: {len(batch)} embeddings")
+                logger.info(
+                    f"Stored batch {i // batch_size + 1}: {len(batch)} embeddings"
+                )
 
             logger.info(f"Successfully stored {stored_count} embeddings")
             return stored_count
@@ -213,25 +214,25 @@ class QdrantVectorStore(VectorStoreProvider):
                 score_threshold=score_threshold,
                 query_filter=search_filter,
                 with_payload=True,
-                with_vectors=False  # Don't return vectors to save bandwidth
+                with_vectors=False,  # Don't return vectors to save bandwidth
             )
 
             # Format results
             results: list[dict[str, Any]] = []
             for result in search_results:
                 formatted_result = {
-                    'id': result.id,
-                    'score': result.score,
-                    'text': result.payload.get('text', ''),
-                    'chunk_id': result.payload.get('chunk_id', ''),
-                    'url': result.payload.get('url', ''),
-                    'title': result.payload.get('title', ''),
-                    'description': result.payload.get('description', ''),
-                    'keywords': result.payload.get('keywords', []),
-                    'word_count': result.payload.get('word_count', 0),
-                    'chunk_index': result.payload.get('chunk_index', 0),
-                    'total_chunks': result.payload.get('total_chunks', 1),
-                    'metadata': result.payload
+                    "id": result.id,
+                    "score": result.score,
+                    "text": result.payload.get("text", ""),
+                    "chunk_id": result.payload.get("chunk_id", ""),
+                    "url": result.payload.get("url", ""),
+                    "title": result.payload.get("title", ""),
+                    "description": result.payload.get("description", ""),
+                    "keywords": result.payload.get("keywords", []),
+                    "word_count": result.payload.get("word_count", 0),
+                    "chunk_index": result.payload.get("chunk_index", 0),
+                    "total_chunks": result.payload.get("total_chunks", 1),
+                    "metadata": result.payload,
                 }
                 results.append(formatted_result)
 
@@ -253,15 +254,17 @@ class QdrantVectorStore(VectorStoreProvider):
             StorageError: If operation fails
         """
         try:
-            collection_info = await self.client.get_collection(self.config.collection_name)
+            collection_info = await self.client.get_collection(
+                self.config.collection_name
+            )
 
             return {
-                'name': collection_info.config.params.vectors.size,
-                'vector_size': collection_info.config.params.vectors.size,
-                'distance_metric': collection_info.config.params.vectors.distance.value,
-                'points_count': collection_info.points_count,
-                'indexed_vectors_count': collection_info.indexed_vectors_count,
-                'status': collection_info.status.value
+                "name": collection_info.config.params.vectors.size,
+                "vector_size": collection_info.config.params.vectors.size,
+                "distance_metric": collection_info.config.params.vectors.distance.value,
+                "points_count": collection_info.points_count,
+                "indexed_vectors_count": collection_info.indexed_vectors_count,
+                "status": collection_info.status.value,
             }
 
         except Exception as e:
@@ -280,7 +283,9 @@ class QdrantVectorStore(VectorStoreProvider):
         """
         try:
             await self.client.delete_collection(self.config.collection_name)
-            logger.info(f"Successfully deleted collection: {self.config.collection_name}")
+            logger.info(
+                f"Successfully deleted collection: {self.config.collection_name}"
+            )
             return True
 
         except Exception as e:
@@ -310,8 +315,7 @@ class QdrantVectorStore(VectorStoreProvider):
                     count_filter = Filter(must=conditions)
 
             result = await self.client.count(
-                collection_name=self.config.collection_name,
-                count_filter=count_filter
+                collection_name=self.config.collection_name, count_filter=count_filter
             )
 
             return result.count

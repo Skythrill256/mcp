@@ -4,7 +4,7 @@ import os
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple
 
-import yaml
+import yaml  # type: ignore[import-untyped]
 
 
 def _default_config_path() -> str:
@@ -76,7 +76,10 @@ class DatabaseConfig:
 
         # If no explicit enabled flags, enable the preferred one for backward compat
         if not any(ep.enabled for ep in self.retrieval_endpoints.values()):
-            if self.preferred_endpoint and self.preferred_endpoint in self.retrieval_endpoints:
+            if (
+                self.preferred_endpoint
+                and self.preferred_endpoint in self.retrieval_endpoints
+            ):
                 self.retrieval_endpoints[self.preferred_endpoint].enabled = True
 
     def pick_active_endpoint(self) -> Tuple[str, RetrievalProviderConfig]:
@@ -87,7 +90,10 @@ class DatabaseConfig:
         for name, cfg in self.retrieval_endpoints.items():
             if cfg.enabled:
                 return name, cfg
-        if self.preferred_endpoint and self.preferred_endpoint in self.retrieval_endpoints:
+        if (
+            self.preferred_endpoint
+            and self.preferred_endpoint in self.retrieval_endpoints
+        ):
             name = self.preferred_endpoint
             return name, self.retrieval_endpoints[name]
         # fallback to first
@@ -117,7 +123,11 @@ def load_db_settings(path: Optional[str] = None) -> DBSettings:
     name, ep = cfg.pick_active_endpoint()
 
     # For compatibility: determine connection string and env var name
-    env_var = ep.api_endpoint_env or ("QDRANT_URL" if (ep.db_type or name).lower() == "qdrant" else "POSTGRES_CONNECTION_STRING")
+    env_var = ep.api_endpoint_env or (
+        "QDRANT_URL"
+        if (ep.db_type or name).lower() == "qdrant"
+        else "POSTGRES_CONNECTION_STRING"
+    )
     connection = ep.api_endpoint or os.getenv(env_var) if env_var else None
     index = ep.index_name or "web_vectors"
     db_type = (ep.db_type or name or "qdrant").lower()

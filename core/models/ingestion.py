@@ -26,6 +26,7 @@ class IngestResponse(BaseModel):
 
 class EmbeddingResult(BaseModel):
     """Result of embedding generation."""
+
     text: str
     embedding: list[float]
     token_count: int

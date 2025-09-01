@@ -1,8 +1,11 @@
+import logging
 import socket
 from typing import Optional
 from urllib.parse import urljoin, urlparse
 
 import httpx
+
+logger = logging.getLogger(__name__)
 
 
 def find_free_port(preferred: Optional[int] = None) -> int:
@@ -24,8 +27,8 @@ async def discover_sitemaps(base_url: str) -> list[str]:
                 resp = await client.get(sitemap_url)
                 if resp.status_code == 200 and "<" in resp.text:
                     discovered.append(sitemap_url)
-            except Exception:
-                pass
+            except Exception as e:
+                logger.debug("Sitemap discovery failed for %s: %s", sitemap_url, e)
         # robots.txt hints
         try:
             robots_url = urljoin(origin, "/robots.txt")
@@ -35,7 +38,7 @@ async def discover_sitemaps(base_url: str) -> list[str]:
                     if line.lower().startswith("sitemap:"):
                         sm = line.split(":", 1)[1].strip()
                         discovered.append(sm)
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("robots.txt fetch failed for %s: %s", base_url, e)
     # dedupe
     return list(dict.fromkeys(discovered))

@@ -1,0 +1,30 @@
+# Bandit configuration file
+# See: https://bandit.readthedocs.io/en/latest/config.html
+
+# Which directories to scan
+include_paths:
+  - core/
+
+# Which directories to skip
+exclude_paths:
+  - tests/
+  - __pycache__/
+  - .git/
+  - .venv/
+  - venv/
+  - build/
+  - dist/
+
+# Which test IDs to skip (if any)
+skips:
+  - B101  # assert_used (allowed in tests; skip globally to avoid noise)
+
+# Which test IDs to run
+# tests:
+#   - B101
+
+# Confidence levels: HIGH, MEDIUM, LOW
+confidence: MEDIUM
+
+# Severity levels: HIGH, MEDIUM, LOW
+severity: MEDIUM

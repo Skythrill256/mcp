@@ -30,3 +30,1187 @@
 2025-08-28 10:05:14.692 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
 2025-08-28 10:05:14.692 | INFO     | logging:callHandlers:1737 - Processing query: tell about anjishnu
 2025-08-28 10:05:14.743 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 15:44:31.760 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 15:44:48.581 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 15:45:03.541 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 15:46:27.039 | INFO     | core.logging:info:90 - Embedding request received for 13 documents
+2025-09-01 15:46:27.043 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 15:46:27.045 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 15:46:27.045 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:46:32.215 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 15:46:32.238 | ERROR    | logging:callHandlers:1737 - Error creating table: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 15:46:32.238 | INFO     | core.logging:info:90 - Embedding failed with error: Failed to create table: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 15:46:32.241 | INFO     | core.logging:info:90 - Embedding request received for 18 documents
+2025-09-01 15:46:32.244 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 15:46:32.246 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 15:46:32.247 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:46:36.715 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 15:46:36.717 | ERROR    | logging:callHandlers:1737 - Error creating table: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 15:46:36.718 | INFO     | core.logging:info:90 - Embedding failed with error: Failed to create table: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 15:47:14.940 | INFO     | core.logging:info:90 - Embedding request received for 25 documents
+2025-09-01 15:47:14.943 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 15:47:14.945 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 15:47:14.945 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:47:19.458 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 15:47:19.459 | ERROR    | logging:callHandlers:1737 - Error creating table: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 15:47:19.460 | INFO     | core.logging:info:90 - Embedding failed with error: Failed to create table: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 15:50:50.776 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 15:51:34.670 | INFO     | core.logging:info:90 - Embedding request received for 9 documents
+2025-09-01 15:51:34.906 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 15:51:34.906 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 15:51:34.910 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 15:51:34.911 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:51:41.860 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 15:51:41.907 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 15:51:41.909 | INFO     | logging:callHandlers:1737 - Deleting existing collection: site_iem_edu_in
+2025-09-01 15:51:41.925 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/site_iem_edu_in "HTTP/1.1 200 OK"
+2025-09-01 15:51:41.929 | INFO     | logging:callHandlers:1737 - Creating collection: site_iem_edu_in
+2025-09-01 15:51:42.076 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/site_iem_edu_in "HTTP/1.1 200 OK"
+2025-09-01 15:51:42.078 | INFO     | logging:callHandlers:1737 - Successfully created collection: site_iem_edu_in
+2025-09-01 15:51:42.079 | INFO     | logging:callHandlers:1737 - Generating embeddings for 9 items locally
+2025-09-01 15:51:42.610 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 9
+2025-09-01 15:51:42.611 | INFO     | logging:callHandlers:1737 - Returning 9 embedding results
+2025-09-01 15:51:42.615 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 15:51:42.617 | INFO     | logging:callHandlers:1737 - Collection site_iem_edu_in already exists
+2025-09-01 15:51:42.634 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/site_iem_edu_in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 15:51:42.637 | INFO     | logging:callHandlers:1737 - Stored batch 1: 9 embeddings
+2025-09-01 15:51:42.637 | INFO     | logging:callHandlers:1737 - Successfully stored 9 embeddings
+2025-09-01 15:51:42.882 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:51:50.459 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 15:51:50.465 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 15:51:50.490 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 15:53:10.573 | INFO     | core.logging:info:90 - Embedding request received for 18 documents
+2025-09-01 15:53:10.608 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 15:53:10.609 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 15:53:10.612 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 15:53:10.612 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:53:14.826 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 15:53:14.829 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 15:53:14.831 | INFO     | logging:callHandlers:1737 - Creating collection: site_localhost_6274
+2025-09-01 15:53:14.937 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/site_localhost_6274 "HTTP/1.1 200 OK"
+2025-09-01 15:53:14.939 | INFO     | logging:callHandlers:1737 - Successfully created collection: site_localhost_6274
+2025-09-01 15:53:14.939 | INFO     | logging:callHandlers:1737 - Generating embeddings for 18 items locally
+2025-09-01 15:53:15.791 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 18
+2025-09-01 15:53:15.793 | INFO     | logging:callHandlers:1737 - Returning 18 embedding results
+2025-09-01 15:53:15.803 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 15:53:15.805 | INFO     | logging:callHandlers:1737 - Collection site_localhost_6274 already exists
+2025-09-01 15:53:15.839 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/site_localhost_6274/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 15:53:15.841 | INFO     | logging:callHandlers:1737 - Stored batch 1: 18 embeddings
+2025-09-01 15:53:15.841 | INFO     | logging:callHandlers:1737 - Successfully stored 18 embeddings
+2025-09-01 15:53:15.851 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 15:53:23.337 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 15:53:23.343 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 15:53:23.365 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 15:57:13.427 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:09:13.353 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:09:33.628 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:10:40.626 | INFO     | core.logging:info:90 - Embedding request received for 38 documents with collection name: tint.edu.in
+2025-09-01 16:10:40.692 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:10:40.693 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:10:40.696 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:10:40.697 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:10:44.953 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:10:44.961 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:10:44.964 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:10:45.074 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:10:45.076 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:10:45.077 | INFO     | logging:callHandlers:1737 - Generating embeddings for 38 items locally
+2025-09-01 16:10:46.607 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 38
+2025-09-01 16:10:46.609 | INFO     | logging:callHandlers:1737 - Returning 38 embedding results
+2025-09-01 16:10:46.612 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:10:46.613 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:10:46.649 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:10:46.653 | INFO     | logging:callHandlers:1737 - Stored batch 1: 32 embeddings
+2025-09-01 16:10:46.665 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:10:46.667 | INFO     | logging:callHandlers:1737 - Stored batch 2: 6 embeddings
+2025-09-01 16:10:46.668 | INFO     | logging:callHandlers:1737 - Successfully stored 38 embeddings
+2025-09-01 16:10:46.792 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:10:54.292 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:10:54.308 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:10:54.331 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 16:11:46.182 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 982b5bc7dfac41c481550d972cf2cb7e
+2025-09-01 16:11:48.729 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 16:12:03.933 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 16:12:03.976 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:12:03.980 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 16:12:03.980 | INFO     | logging:callHandlers:1737 - Processing query: tell about techno
+2025-09-01 16:12:04.046 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections/site_tint_edu_in "HTTP/1.1 404 Not Found"
+2025-09-01 16:12:04.048 | WARNING  | logging:callHandlers:1737 - Could not detect vector format for collection site_tint_edu_in: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `site_tint_edu_in` doesn\'t exist!"},"time":0.000016281}'
+2025-09-01 16:12:04.058 | INFO     | logging:callHandlers:1737 - HTTP Request: POST http://127.0.0.1:6333/collections/site_tint_edu_in/points/search "HTTP/1.1 404 Not Found"
+2025-09-01 16:12:04.061 | ERROR    | logging:callHandlers:1737 - Error executing query: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `site_tint_edu_in` doesn\'t exist!"},"time":7.414e-6}'
+2025-09-01 16:12:04.818 | INFO     | logging:callHandlers:1737 - Warning: DeprecationWarning: `search` method is deprecated and will be removed in the future. Use `query_points` instead.
+2025-09-01 16:21:46.710 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:22:05.926 | INFO     | core.logging:info:90 - Embedding request received for 5 documents with collection name: tint.edu.in
+2025-09-01 16:22:06.013 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:22:06.014 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:22:06.017 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:22:06.017 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:22:11.676 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:22:11.686 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:22:11.689 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 16:22:11.697 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:22:11.699 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:22:11.862 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:22:11.864 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:22:11.864 | INFO     | logging:callHandlers:1737 - Generating embeddings for 5 items locally
+2025-09-01 16:22:12.100 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 5
+2025-09-01 16:22:12.101 | INFO     | logging:callHandlers:1737 - Returning 5 embedding results
+2025-09-01 16:22:12.105 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:22:12.106 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:22:12.118 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:22:12.121 | INFO     | logging:callHandlers:1737 - Stored batch 1: 5 embeddings
+2025-09-01 16:22:12.122 | INFO     | logging:callHandlers:1737 - Successfully stored 5 embeddings
+2025-09-01 16:22:12.238 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:22:19.566 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:22:19.580 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:22:19.602 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 16:27:27.852 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:27:53.910 | INFO     | core.logging:info:90 - Embedding request received for 16 documents with collection name: tint.edu.in
+2025-09-01 16:27:53.971 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:27:53.973 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:27:53.976 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:27:53.976 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:27:59.580 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:27:59.590 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:27:59.592 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 16:27:59.604 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:27:59.609 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:27:59.768 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:27:59.770 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:27:59.770 | INFO     | logging:callHandlers:1737 - Generating embeddings for 16 items locally
+2025-09-01 16:28:00.448 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 16
+2025-09-01 16:28:00.449 | INFO     | logging:callHandlers:1737 - Returning 16 embedding results
+2025-09-01 16:28:00.452 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:28:00.453 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:28:00.473 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:28:00.475 | INFO     | logging:callHandlers:1737 - Stored batch 1: 16 embeddings
+2025-09-01 16:28:00.476 | INFO     | logging:callHandlers:1737 - Successfully stored 16 embeddings
+2025-09-01 16:28:00.587 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:28:09.163 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:28:09.178 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:28:09.201 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 16:37:34.893 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:38:24.026 | INFO     | core.logging:info:90 - Embedding request received for 11 documents with collection name: tint.edu.in
+2025-09-01 16:38:24.091 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:38:24.092 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:38:24.094 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:38:24.095 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:38:28.472 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:38:28.480 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:38:28.482 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:38:28.579 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:38:28.582 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:38:28.583 | INFO     | logging:callHandlers:1737 - Generating embeddings for 11 items locally
+2025-09-01 16:38:29.029 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 11
+2025-09-01 16:38:29.030 | INFO     | logging:callHandlers:1737 - Returning 11 embedding results
+2025-09-01 16:38:29.033 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:38:29.034 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:38:29.050 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:38:29.052 | INFO     | logging:callHandlers:1737 - Stored batch 1: 11 embeddings
+2025-09-01 16:38:29.052 | INFO     | logging:callHandlers:1737 - Successfully stored 11 embeddings
+2025-09-01 16:38:29.172 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:38:37.398 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:38:37.404 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:38:37.439 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 16:39:15.702 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: c0f601ea621844978da18b29cf9e8c12
+2025-09-01 16:39:18.864 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 16:39:30.415 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 16:39:30.459 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:39:30.463 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 16:39:30.463 | INFO     | logging:callHandlers:1737 - Processing query: tell about college
+2025-09-01 16:39:30.516 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:39:30.534 | INFO     | logging:callHandlers:1737 - HTTP Request: POST http://127.0.0.1:6333/collections/tint.edu.in/points/search "HTTP/1.1 200 OK"
+2025-09-01 16:39:34.850 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 16:39:34.861 | INFO     | logging:callHandlers:1737 - Applying Cohere reranking to 10 sources
+2025-09-01 16:39:36.602 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-09-01 16:39:36.666 | INFO     | logging:callHandlers:1737 - Query completed with 5 sources
+2025-09-01 16:39:36.667 | INFO     | logging:callHandlers:1737 - Warning: DeprecationWarning: `search` method is deprecated and will be removed in the future. Use `query_points` instead.
+2025-09-01 16:40:38.742 | INFO     | core.logging:info:90 - Embedding request received for 2 documents with collection name: tint.edu.in
+2025-09-01 16:40:38.782 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:40:38.784 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:40:38.786 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:40:38.786 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:40:42.612 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:40:42.616 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:40:42.617 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 16:40:42.628 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:40:42.630 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:40:42.771 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:40:42.773 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:40:42.774 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 16:40:42.815 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 16:40:42.815 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 16:40:42.818 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:40:42.819 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:40:42.828 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:40:42.829 | INFO     | logging:callHandlers:1737 - Stored batch 1: 2 embeddings
+2025-09-01 16:40:42.830 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 16:40:42.836 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:40:46.914 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:40:46.920 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:40:46.935 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 16:41:09.073 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 16:43:40.409 | INFO     | core.logging:info:90 - Embedding request received for 4 documents with collection name: tint.edu.in
+2025-09-01 16:43:40.487 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:43:40.489 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:43:40.491 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:43:40.491 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:43:45.275 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:43:45.284 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:43:45.287 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 16:43:45.294 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:43:45.295 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:43:45.435 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:43:45.436 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:43:45.437 | INFO     | logging:callHandlers:1737 - Generating embeddings for 4 items locally
+2025-09-01 16:43:45.635 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 4
+2025-09-01 16:43:45.636 | INFO     | logging:callHandlers:1737 - Returning 4 embedding results
+2025-09-01 16:43:45.639 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:43:45.640 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:43:45.651 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:43:45.653 | INFO     | logging:callHandlers:1737 - Stored batch 1: 4 embeddings
+2025-09-01 16:43:45.654 | INFO     | logging:callHandlers:1737 - Successfully stored 4 embeddings
+2025-09-01 16:43:45.772 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:43:55.038 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:43:55.051 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:43:55.073 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 16:55:17.245 | INFO     | core.logging:info:90 - Embedding request received for 3 documents with collection name: tint.edu.in
+2025-09-01 16:55:17.282 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 16:55:17.283 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 16:55:17.286 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 16:55:17.286 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:55:22.849 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 16:55:22.852 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:55:22.855 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 16:55:22.863 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:55:22.864 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 16:55:23.002 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 16:55:23.004 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 16:55:23.005 | INFO     | logging:callHandlers:1737 - Generating embeddings for 3 items locally
+2025-09-01 16:55:23.165 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 3
+2025-09-01 16:55:23.166 | INFO     | logging:callHandlers:1737 - Returning 3 embedding results
+2025-09-01 16:55:23.170 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 16:55:23.172 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 16:55:23.180 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 16:55:23.182 | INFO     | logging:callHandlers:1737 - Stored batch 1: 3 embeddings
+2025-09-01 16:55:23.182 | INFO     | logging:callHandlers:1737 - Successfully stored 3 embeddings
+2025-09-01 16:55:23.189 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 16:55:31.918 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 16:55:31.922 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 16:55:31.942 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 17:02:43.913 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:03:03.685 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:03:08.163 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:03:08.164 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:03:10.410 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:03:10.774 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:03:10.850 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:03:10.851 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:03:10.852 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:03:10.852 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:03:11.441 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:03:11.443 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:03:11.443 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:03:18.429 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:03:18.430 | ERROR    | logging:callHandlers:1737 - Error creating table: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:03:18.430 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to create table: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:06:08.953 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:06:48.548 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:07:00.174 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:07:03.316 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:07:03.317 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:07:04.858 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:07:05.238 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:07:05.336 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:07:05.337 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:07:05.338 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:07:05.338 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:07:05.913 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:07:05.915 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:07:05.916 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:07:12.421 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:07:22.862 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 17:07:23.990 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:07:25.886 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 17:07:26.755 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:07:26.880 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:07:26.880 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:07:37.562 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 17:07:38.328 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:07:38.329 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating extension: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:07:38.330 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating tables: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:07:50.922 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 17:07:51.056 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:07:58.525 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 17:07:58.530 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 17:07:58.549 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 17:08:48.849 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 32f47c1b8f7a4d7e9881878a17f4a6ee
+2025-09-01 17:08:51.146 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 17:08:58.496 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 17:08:58.511 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 17:08:58.511 | INFO     | logging:callHandlers:1737 - Processing query: tell about anjishnu
+2025-09-01 17:08:58.575 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 17:11:58.495 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:12:15.256 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:12:19.456 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:12:19.456 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:12:20.010 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:12:20.502 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:12:20.598 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:12:20.600 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:12:20.600 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:12:20.601 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:12:21.221 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:12:21.224 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:12:21.225 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:12:25.588 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:12:37.371 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 17:12:37.927 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:12:39.771 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 17:12:40.821 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:12:40.944 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:12:40.945 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:12:52.703 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 17:12:53.587 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:12:53.588 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating extension: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:12:53.588 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating tables: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:13:03.828 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 17:13:03.946 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:13:11.464 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 17:13:11.468 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 17:13:11.485 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 17:14:15.504 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 4a5ddd88f4984b2c87d8a5188ccbc445
+2025-09-01 17:14:18.079 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 17:14:27.228 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 17:14:27.242 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 17:14:27.242 | INFO     | logging:callHandlers:1737 - Processing query: tell about anjishnu
+2025-09-01 17:14:27.292 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 17:16:45.088 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:16:55.948 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:16:58.676 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:16:58.677 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:16:59.251 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:16:59.760 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:16:59.974 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:16:59.976 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:16:59.976 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:16:59.976 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:17:00.617 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:17:00.621 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:17:00.621 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:17:05.361 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:17:05.361 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:17:05.361 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:17:05.362 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:17:05.362 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:17:17.819 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 17:17:18.483 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:17:20.274 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 17:17:21.064 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:17:21.197 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:17:21.197 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:17:21.198 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:17:21.198 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:17:21.198 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:17:21.198 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:17:32.975 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 17:17:33.898 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:17:33.899 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:17:33.899 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:17:33.899 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:17:33.907 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:17:33.908 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating extension: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:17:33.908 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating tables: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:17:46.074 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 17:17:46.220 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:17:53.396 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 17:17:53.402 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 17:17:53.421 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 17:18:06.851 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 7baa8e6830184fe2aaf57beb50b43b17
+2025-09-01 17:18:09.142 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 17:18:16.826 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 17:18:16.838 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 17:18:16.838 | INFO     | logging:callHandlers:1737 - Processing query: tell about him
+
+2025-09-01 17:18:16.878 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 17:20:14.649 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:20:24.310 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:20:27.105 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:20:27.105 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:20:27.654 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:20:28.002 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:20:28.114 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:20:28.115 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:20:28.116 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:20:28.116 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:20:28.772 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:20:28.775 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:20:28.775 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:20:35.661 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:20:35.662 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:20:35.662 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:20:35.662 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:20:35.662 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:20:47.819 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 17:20:48.970 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:20:50.399 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 17:20:51.288 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:20:51.410 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:20:51.410 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:20:51.410 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:20:51.411 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:20:51.411 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:20:51.411 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:21:00.622 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 17:21:01.262 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:21:01.263 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:21:01.263 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:21:01.263 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:21:01.264 | INFO     | logging:callHandlers:1737 - Using sync connection string: postgresql://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:21:01.275 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: Could not parse SQLAlchemy URL from given URL string
+2025-09-01 17:21:01.275 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: Could not parse SQLAlchemy URL from given URL string
+2025-09-01 17:23:41.325 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:23:54.668 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:23:57.893 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:23:57.893 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:23:58.854 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:23:59.513 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:23:59.593 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:23:59.594 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:23:59.595 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:23:59.595 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:24:00.191 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:24:00.194 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:24:00.195 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:24:05.918 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:24:05.919 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:24:05.919 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:24:05.919 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:05.919 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:17.293 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 17:24:18.063 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:24:19.677 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 17:24:20.737 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:24:20.876 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:24:20.876 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:24:20.876 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:24:20.877 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:24:20.877 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:20.877 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:31.813 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 17:24:32.410 | INFO     | logging:callHandlers:1737 - Using sync connection string: postgresql://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:32.411 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:24:32.411 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:24:32.411 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:32.411 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:24:57.733 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 17:24:57.851 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:25:06.042 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 17:25:06.048 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 17:25:06.065 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 17:25:23.648 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 3b53387928b049b8a060c4e0641bb125
+2025-09-01 17:25:25.741 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 17:25:32.410 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 17:25:32.426 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 17:25:32.426 | INFO     | logging:callHandlers:1737 - Processing query: tell about him
+2025-09-01 17:25:32.469 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 17:31:57.883 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:32:07.938 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:32:10.920 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:32:10.920 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:32:12.200 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:32:12.571 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:32:12.681 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:32:12.682 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:32:12.683 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:32:12.683 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:32:13.321 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:32:13.324 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:32:13.324 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:32:18.644 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:32:18.645 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:32:18.645 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:32:18.645 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:32:18.646 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:32:26.444 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 17:32:27.039 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:32:28.368 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 17:32:29.616 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:32:29.754 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:32:29.755 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:32:29.755 | INFO     | logging:callHandlers:1737 - Original connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech/neondb
+2025-09-01 17:32:29.756 | INFO     | logging:callHandlers:1737 - Parsed URL - host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: None, port type: <class 'NoneType'>
+2025-09-01 17:32:29.756 | INFO     | logging:callHandlers:1737 - Reconstructed connection string with explicit port: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:32:29.756 | INFO     | logging:callHandlers:1737 - Final async connection string: postgresql+asyncpg://neondb_owner:npg_rUXa1kqsd7GZ@ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb
+2025-09-01 17:32:39.567 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 17:32:40.248 | INFO     | logging:callHandlers:1737 - Creating PGVectorStore with host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: 5432, database: neondb
+2025-09-01 17:32:40.249 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: 'AppSettings' object has no attribute 'embedding_dim'
+2025-09-01 17:32:40.249 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: 'AppSettings' object has no attribute 'embedding_dim'
+2025-09-01 17:33:58.671 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:34:15.629 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:34:18.839 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:34:18.839 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:34:19.592 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:34:20.635 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:34:20.729 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:34:20.730 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:34:20.731 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:34:20.731 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:34:21.350 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:34:21.353 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:34:21.353 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:34:27.658 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:34:27.659 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Unexpected embedding error: PgVectorStoreProvider.create_collection() got an unexpected keyword argument 'recreate'
+2025-09-01 17:35:38.306 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:35:49.063 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:35:52.488 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:35:52.488 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:35:53.151 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:35:53.472 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:35:53.575 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:35:53.577 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:35:53.578 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:35:53.578 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:35:54.351 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:35:54.353 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:35:54.354 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:36:00.344 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:36:00.344 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:36:00.345 | INFO     | logging:callHandlers:1737 - Creating PGVectorStore with host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: 5432, database: neondb
+2025-09-01 17:36:00.350 | INFO     | logging:callHandlers:1737 - Successfully created table via from_params: site_anjishnu_vercel_app
+2025-09-01 17:36:00.350 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:36:00.501 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:36:00.501 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:36:00.501 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:36:00.502 | INFO     | logging:callHandlers:1737 - Successfully created table via from_params: site_anjishnu_vercel_app
+2025-09-01 17:36:21.758 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 17:36:21.882 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:36:28.511 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 17:36:28.517 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 17:36:28.536 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 17:36:40.690 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: a51a2dc6d9234e55bd48e81bdf121300
+2025-09-01 17:36:42.947 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 17:36:51.338 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 17:36:51.351 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 17:36:51.351 | INFO     | logging:callHandlers:1737 - Processing query: hi tell about him
+2025-09-01 17:36:51.439 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 17:50:31.052 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:50:41.953 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:50:45.177 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:50:45.177 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:50:47.477 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:50:47.966 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:50:48.037 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:50:48.038 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:50:48.039 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:50:48.039 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:50:48.683 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:50:48.686 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:50:48.686 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:50:53.270 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:50:53.271 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:50:53.271 | INFO     | logging:callHandlers:1737 - Initializing PGVectorStore table=site_anjishnu_vercel_app host=ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech port=5432
+2025-09-01 17:50:53.276 | INFO     | logging:callHandlers:1737 - Successfully created table via from_params: site_anjishnu_vercel_app
+2025-09-01 17:50:53.276 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:50:53.374 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:50:53.375 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:50:53.375 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:50:53.375 | INFO     | logging:callHandlers:1737 - Successfully created table via from_params: site_anjishnu_vercel_app
+2025-09-01 17:50:57.365 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: (psycopg2.OperationalError) connection to server at "ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech" (64:ff9b::369c:f1e), port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech" (64:ff9b::369c:f1e), port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 17:51:00.765 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating extension: (psycopg2.OperationalError) connection to server at "ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech" (64:ff9b::3da:8c3d), port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech" (64:ff9b::3da:8c3d), port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 17:51:03.184 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating tables: (psycopg2.OperationalError) connection to server at "ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech" (64:ff9b::369c:f1e), port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech" (64:ff9b::369c:f1e), port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 17:51:05.078 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: password authentication failed for user 'neondb_owner'
+2025-09-01 17:51:05.079 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: password authentication failed for user 'neondb_owner'
+2025-09-01 17:53:17.923 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:53:31.919 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:53:33.665 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:53:33.666 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:53:34.591 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:53:35.040 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:53:35.217 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:53:35.219 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:53:35.219 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:53:35.219 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:53:36.526 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:53:36.529 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:53:36.529 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:53:42.364 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:53:42.364 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:53:42.365 | INFO     | logging:callHandlers:1737 - Initializing PGVectorStore table=site_anjishnu_vercel_app host=ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech port=5432
+2025-09-01 17:53:42.371 | INFO     | logging:callHandlers:1737 - Successfully created table via from_params: site_anjishnu_vercel_app
+2025-09-01 17:53:42.372 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 17:53:42.541 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 17:53:42.542 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 17:53:42.543 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 17:53:42.543 | INFO     | logging:callHandlers:1737 - Successfully created table via from_params: site_anjishnu_vercel_app
+2025-09-01 17:53:42.550 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: (psycopg2.ProgrammingError) invalid dsn: invalid connection option "ssl"
+
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-01 17:53:42.551 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating extension: (psycopg2.ProgrammingError) invalid dsn: invalid connection option "ssl"
+
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-01 17:53:42.551 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating tables: (psycopg2.ProgrammingError) invalid dsn: invalid connection option "ssl"
+
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-01 17:53:45.313 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: password authentication failed for user 'neondb_owner'
+2025-09-01 17:53:45.313 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: password authentication failed for user 'neondb_owner'
+2025-09-01 17:54:19.923 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 17:54:35.963 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 17:54:38.629 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 17:54:38.629 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 17:54:39.238 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:54:39.671 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 17:54:39.738 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 17:54:39.740 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 17:54:39.741 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 17:54:39.741 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 17:54:40.383 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 17:54:40.386 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 17:54:40.386 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 17:54:46.248 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 17:54:46.249 | ERROR    | logging:callHandlers:1737 - Error creating table: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 17:54:46.249 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to create table: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2025-09-01 18:02:21.182 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:05:19.756 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:05:59.111 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 18:06:02.084 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 18:06:02.084 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 18:06:05.370 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:06:05.732 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:06:05.806 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 18:06:05.808 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 18:06:05.808 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 18:06:05.809 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 18:06:06.408 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:06:06.410 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:06:06.410 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:06:12.152 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:06:23.541 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 18:06:24.427 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 18:06:25.551 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 18:06:25.837 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 18:06:25.956 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 18:06:25.956 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 18:06:36.300 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 18:06:58.426 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 18:06:58.554 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:07:07.835 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 18:07:07.840 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 18:07:07.864 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 18:07:26.832 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 42b303a1946f45368886bc185f86bd73
+2025-09-01 18:07:29.484 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 18:07:36.270 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 18:07:36.284 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 18:07:36.285 | INFO     | logging:callHandlers:1737 - Processing query: tell about him
+2025-09-01 18:07:36.326 | ERROR    | logging:callHandlers:1737 - Error executing query: invalid literal for int() with base 10: 'None'
+2025-09-01 18:12:06.899 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:12:18.601 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 18:12:20.790 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 18:12:20.791 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 18:12:21.860 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:12:22.453 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:12:22.516 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 18:12:22.518 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 18:12:22.519 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 18:12:22.519 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 18:12:23.169 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:12:23.172 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:12:23.172 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:12:29.120 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:12:40.243 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 18:12:41.277 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 18:12:41.940 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 18:12:42.393 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 18:12:42.511 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 18:12:42.512 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 18:12:53.065 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 18:13:17.625 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 18:13:17.745 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:13:23.971 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 18:13:23.978 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 18:13:23.995 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 18:14:02.492 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 1a899df385d242c6947ba33a235c3d1f
+2025-09-01 18:14:05.030 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 18:14:10.337 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 18:14:10.345 | INFO     | logging:callHandlers:1737 - PGVector URLs prepared (masked host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: 5432)
+2025-09-01 18:14:10.353 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 18:14:10.353 | INFO     | logging:callHandlers:1737 - Processing query: tell
+2025-09-01 18:14:35.307 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: (psycopg.OperationalError) connection failed: connection to server at "44.198.216.75", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "44.198.216.75", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+Multiple connection attempts failed. All failures were:
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::3da:8c3d': connection failed: connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::369c:f1e': connection failed: connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::2cc6:d84b': connection failed: connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '54.156.15.30': connection failed: connection to server at "54.156.15.30", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "54.156.15.30", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '3.218.140.61': connection failed: connection to server at "3.218.140.61", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "3.218.140.61", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '44.198.216.75': connection failed: connection to server at "44.198.216.75", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "44.198.216.75", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 18:14:49.943 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:15:10.061 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:15:47.503 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 18:15:51.142 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 18:15:51.142 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 18:15:51.795 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:15:52.199 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:15:52.279 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 18:15:52.281 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 18:15:52.281 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 18:15:52.282 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 18:15:52.883 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:15:52.885 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:15:52.886 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:15:59.731 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:16:10.523 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 18:16:11.238 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 18:16:11.794 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 18:16:12.214 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 18:16:12.341 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 18:16:12.341 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 18:16:23.754 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 18:16:45.833 | INFO     | logging:callHandlers:1737 - Successfully stored 2 embeddings
+2025-09-01 18:16:45.956 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:16:54.189 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 18:16:54.197 | INFO     | core.logging:info:90 - Ingestion completed successfully for URL: https://anjishnu.vercel.app/
+2025-09-01 18:16:54.215 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 18:17:03.412 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 530d0da438bd470bb8d7cd91b092a296
+2025-09-01 18:17:05.360 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 18:17:12.899 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 18:17:12.909 | INFO     | logging:callHandlers:1737 - PGVector URLs prepared (masked host: ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech, port: 5432)
+2025-09-01 18:17:12.915 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 18:17:12.915 | INFO     | logging:callHandlers:1737 - Processing query: tell about anjishnu
+2025-09-01 18:17:34.552 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating schema: (psycopg.OperationalError) connection failed: connection to server at "3.218.140.61", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "3.218.140.61", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+Multiple connection attempts failed. All failures were:
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::369c:f1e': connection failed: connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::2cc6:d84b': connection failed: connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::3da:8c3d': connection failed: connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '44.198.216.75': connection failed: connection to server at "44.198.216.75", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "44.198.216.75", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '54.156.15.30': connection failed: connection to server at "54.156.15.30", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "54.156.15.30", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '3.218.140.61': connection failed: connection to server at "3.218.140.61", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "3.218.140.61", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 18:17:52.599 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating extension: (psycopg.OperationalError) connection failed: connection to server at "3.218.140.61", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "3.218.140.61", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+Multiple connection attempts failed. All failures were:
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::2cc6:d84b': connection failed: connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::369c:f1e': connection failed: connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::3da:8c3d': connection failed: connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '54.156.15.30': connection failed: connection to server at "54.156.15.30", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "54.156.15.30", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '44.198.216.75': connection failed: connection to server at "44.198.216.75", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "44.198.216.75", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '3.218.140.61': connection failed: connection to server at "3.218.140.61", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "3.218.140.61", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 18:18:13.679 | WARNING  | logging:callHandlers:1737 - PG Setup: Error creating tables: (psycopg.OperationalError) connection failed: connection to server at "54.156.15.30", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "54.156.15.30", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+Multiple connection attempts failed. All failures were:
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::3da:8c3d': connection failed: connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::3da:8c3d", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::369c:f1e': connection failed: connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::369c:f1e", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '64:ff9b::2cc6:d84b': connection failed: connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "64:ff9b::2cc6:d84b", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '3.218.140.61': connection failed: connection to server at "3.218.140.61", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "3.218.140.61", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '44.198.216.75': connection failed: connection to server at "44.198.216.75", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "44.198.216.75", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+- host: 'ep-jolly-scene-adzitc76-pooler.c-2.us-east-1.aws.neon.tech', port: 5432, hostaddr: '54.156.15.30': connection failed: connection to server at "54.156.15.30", port 5432 failed: ERROR:  password authentication failed for user 'neondb_owner'
+connection to server at "54.156.15.30", port 5432 failed: ERROR:  connection is insecure (try using `sslmode=require`)
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 18:18:13.684 | INFO     | logging:callHandlers:1737 - Request 2 cancelled - duplicate response suppressed
+2025-09-01 18:19:32.033 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:19:41.495 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:21:17.064 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:21:20.777 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:21:28.388 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 18:21:31.150 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 18:21:31.150 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 18:21:31.894 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:21:32.276 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:21:32.370 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 18:21:32.372 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 18:21:32.373 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 18:21:32.374 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 18:21:32.974 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:21:32.976 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:21:32.977 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:21:39.315 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:21:50.377 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 18:21:51.390 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 18:21:52.223 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 18:21:52.510 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 18:21:52.596 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 18:21:52.597 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 18:22:02.660 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 18:22:13.356 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: `sslmode` parameter must be one of: disable, allow, prefer, require, verify-ca, verify-full
+2025-09-01 18:22:13.356 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: `sslmode` parameter must be one of: disable, allow, prefer, require, verify-ca, verify-full
+2025-09-01 18:24:01.214 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:24:10.931 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 18:24:13.259 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 18:24:13.260 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 18:24:13.779 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:24:14.079 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:24:14.158 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 18:24:14.161 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 18:24:14.161 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 18:24:14.161 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 18:24:14.683 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:24:14.685 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:24:14.685 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:24:21.083 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:24:31.788 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 18:24:32.787 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 18:24:33.552 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 18:24:33.869 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 18:24:33.965 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 18:24:33.965 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 18:24:45.229 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 18:24:55.793 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: `sslmode` parameter must be one of: disable, allow, prefer, require, verify-ca, verify-full
+2025-09-01 18:24:55.793 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: `sslmode` parameter must be one of: disable, allow, prefer, require, verify-ca, verify-full
+2025-09-01 18:25:28.890 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:25:36.420 | INFO     | core.logging:info:90 - Ingestion request received for URL: https://anjishnu.vercel.app/
+2025-09-01 18:25:39.215 | INFO     | logging:callHandlers:1737 - Root discovery: found 1 internal links from page HTML
+2025-09-01 18:25:39.215 | INFO     | logging:callHandlers:1737 - After adding homepage: 2 URLs so far
+2025-09-01 18:25:39.757 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:25:40.120 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/wp-sitemap.xml "HTTP/1.1 404 Not Found"
+2025-09-01 18:25:40.192 | INFO     | logging:callHandlers:1737 - HTTP Request: GET https://anjishnu.vercel.app/robots.txt "HTTP/1.1 200 OK"
+2025-09-01 18:25:40.194 | INFO     | logging:callHandlers:1737 - Sitemap/robots discovery: found 0 URLs
+2025-09-01 18:25:40.194 | INFO     | logging:callHandlers:1737 - Total discovered (deduped) URLs: 2
+2025-09-01 18:25:40.194 | INFO     | logging:callHandlers:1737 - Discovered 2 URLs to crawl from root https://anjishnu.vercel.app/.
+2025-09-01 18:25:40.652 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:25:40.654 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:25:40.654 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:25:48.000 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:25:58.291 | INFO     | logging:callHandlers:1737 - Deleting existing table: site_anjishnu_vercel_app
+2025-09-01 18:25:59.730 | INFO     | logging:callHandlers:1737 - Creating table: site_anjishnu_vercel_app
+2025-09-01 18:26:01.363 | INFO     | logging:callHandlers:1737 - Successfully created table via SQL: site_anjishnu_vercel_app
+2025-09-01 18:26:01.836 | INFO     | logging:callHandlers:1737 - Generating embeddings for 2 items locally
+2025-09-01 18:26:01.926 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 2
+2025-09-01 18:26:01.926 | INFO     | logging:callHandlers:1737 - Returning 2 embedding results
+2025-09-01 18:26:12.406 | INFO     | logging:callHandlers:1737 - Table site_anjishnu_vercel_app already exists
+2025-09-01 18:26:23.200 | ERROR    | logging:callHandlers:1737 - Error storing embeddings: `sslmode` parameter must be one of: disable, allow, prefer, require, verify-ca, verify-full
+2025-09-01 18:26:23.200 | INFO     | core.logging:info:90 - Ingestion failed for URL: https://anjishnu.vercel.app/ with error: Failed to store embeddings: `sslmode` parameter must be one of: disable, allow, prefer, require, verify-ca, verify-full
+2025-09-01 18:30:41.984 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:31:52.755 | INFO     | core.logging:info:90 - Embedding request received for 22 documents with collection name: tint.edu.in
+2025-09-01 18:31:52.829 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 18:31:52.831 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:31:52.835 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:31:52.836 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:31:57.431 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:31:57.442 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 18:31:57.446 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 18:31:57.565 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 18:31:57.567 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 18:31:57.568 | INFO     | logging:callHandlers:1737 - Generating embeddings for 22 items locally
+2025-09-01 18:31:58.890 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 22
+2025-09-01 18:31:58.892 | INFO     | logging:callHandlers:1737 - Returning 22 embedding results
+2025-09-01 18:31:58.895 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 18:31:58.897 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 18:31:58.922 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 18:31:58.925 | INFO     | logging:callHandlers:1737 - Stored batch 1: 22 embeddings
+2025-09-01 18:31:58.926 | INFO     | logging:callHandlers:1737 - Successfully stored 22 embeddings
+2025-09-01 18:31:59.031 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:32:03.093 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 18:32:03.097 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 18:32:03.114 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 18:33:07.860 | INFO     | core.logging:info:90 - Embedding request received for 13 documents with collection name: tint.edu.in
+2025-09-01 18:33:07.901 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 18:33:07.913 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:33:07.921 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:33:07.922 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:33:11.950 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:33:11.954 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 18:33:11.956 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 18:33:11.967 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 18:33:11.968 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 18:33:12.082 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 18:33:12.083 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 18:33:12.083 | INFO     | logging:callHandlers:1737 - Generating embeddings for 13 items locally
+2025-09-01 18:33:13.134 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 13
+2025-09-01 18:33:13.136 | INFO     | logging:callHandlers:1737 - Returning 13 embedding results
+2025-09-01 18:33:13.142 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 18:33:13.144 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 18:33:13.160 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 18:33:13.161 | INFO     | logging:callHandlers:1737 - Stored batch 1: 13 embeddings
+2025-09-01 18:33:13.161 | INFO     | logging:callHandlers:1737 - Successfully stored 13 embeddings
+2025-09-01 18:33:13.168 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:33:17.029 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 18:33:17.033 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 18:33:17.057 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 18:33:43.122 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 2243dc861261405c83e7e1669d7816c9
+2025-09-01 18:33:45.450 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 18:33:55.499 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 18:33:55.556 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 18:33:55.562 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 18:33:55.563 | INFO     | logging:callHandlers:1737 - Processing query: tell me about the college
+2025-09-01 18:33:55.618 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 18:33:55.631 | INFO     | logging:callHandlers:1737 - HTTP Request: POST http://127.0.0.1:6333/collections/tint.edu.in/points/search "HTTP/1.1 200 OK"
+2025-09-01 18:33:59.521 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 18:33:59.531 | INFO     | logging:callHandlers:1737 - Applying Cohere reranking to 10 sources
+2025-09-01 18:34:00.369 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-09-01 18:34:00.427 | INFO     | logging:callHandlers:1737 - Query completed with 5 sources
+2025-09-01 18:34:00.429 | INFO     | logging:callHandlers:1737 - Warning: DeprecationWarning: `search` method is deprecated and will be removed in the future. Use `query_points` instead.
+2025-09-01 18:39:22.420 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:39:35.069 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:52:21.493 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:54:46.314 | INFO     | core.logging:info:90 - Embedding request received for 40 documents with collection name: iem.edu.in
+2025-09-01 18:54:46.444 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:54:46.448 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:54:46.449 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:54:50.883 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:54:50.894 | ERROR    | logging:callHandlers:1737 - Error creating collection: All connection attempts failed
+2025-09-01 18:54:50.894 | INFO     | core.logging:info:90 - Embedding failed with error: Failed to create collection: All connection attempts failed
+2025-09-01 18:55:06.091 | INFO     | core.logging:info:90 - Embedding request received for 12 documents with collection name: iem.edu.in
+2025-09-01 18:55:06.129 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:55:06.131 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:55:06.132 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:55:12.751 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:55:12.752 | ERROR    | logging:callHandlers:1737 - Error creating collection: All connection attempts failed
+2025-09-01 18:55:12.753 | INFO     | core.logging:info:90 - Embedding failed with error: Failed to create collection: All connection attempts failed
+2025-09-01 18:56:31.304 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 18:57:09.279 | INFO     | core.logging:info:90 - Embedding request received for 21 documents with collection name: iem.edu.in
+2025-09-01 18:57:09.344 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 18:57:09.345 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 18:57:09.348 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 18:57:09.349 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:57:16.068 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 18:57:16.078 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 18:57:16.080 | INFO     | logging:callHandlers:1737 - Creating collection: iem.edu.in
+2025-09-01 18:57:16.188 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/iem.edu.in "HTTP/1.1 200 OK"
+2025-09-01 18:57:16.192 | INFO     | logging:callHandlers:1737 - Successfully created collection: iem.edu.in
+2025-09-01 18:57:16.192 | INFO     | logging:callHandlers:1737 - Generating embeddings for 21 items locally
+2025-09-01 18:57:17.469 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 21
+2025-09-01 18:57:17.470 | INFO     | logging:callHandlers:1737 - Returning 21 embedding results
+2025-09-01 18:57:17.475 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 18:57:17.476 | INFO     | logging:callHandlers:1737 - Collection iem.edu.in already exists
+2025-09-01 18:57:17.500 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/iem.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 18:57:17.502 | INFO     | logging:callHandlers:1737 - Stored batch 1: 21 embeddings
+2025-09-01 18:57:17.503 | INFO     | logging:callHandlers:1737 - Successfully stored 21 embeddings
+2025-09-01 18:57:17.648 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 18:57:25.286 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 18:57:25.293 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 18:57:25.327 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 18:58:05.212 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 45e35de5f647422382da3e1f644146db
+2025-09-01 18:58:08.380 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 18:58:19.417 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 18:58:19.453 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 18:58:19.456 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 18:58:19.457 | INFO     | logging:callHandlers:1737 - Processing query: tell about iem college
+2025-09-01 18:58:19.495 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections/iem.edu.in "HTTP/1.1 200 OK"
+2025-09-01 18:58:19.508 | INFO     | logging:callHandlers:1737 - HTTP Request: POST http://127.0.0.1:6333/collections/iem.edu.in/points/search "HTTP/1.1 200 OK"
+2025-09-01 18:58:25.811 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 18:58:25.823 | INFO     | logging:callHandlers:1737 - Applying Cohere reranking to 10 sources
+2025-09-01 18:58:27.734 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-09-01 18:58:28.268 | INFO     | logging:callHandlers:1737 - Query completed with 5 sources
+2025-09-01 18:58:28.270 | INFO     | logging:callHandlers:1737 - Warning: DeprecationWarning: `search` method is deprecated and will be removed in the future. Use `query_points` instead.
+2025-09-01 19:01:01.916 | INFO     | core.logging:info:90 - Embedding request received for 19 documents with collection name: tint.edu.in
+2025-09-01 19:01:01.953 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 19:01:01.956 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 19:01:01.959 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 19:01:01.959 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:01:06.610 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 19:01:06.615 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:01:06.617 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 19:01:06.632 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:01:06.634 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 19:01:06.773 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:01:06.774 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 19:01:06.774 | INFO     | logging:callHandlers:1737 - Generating embeddings for 19 items locally
+2025-09-01 19:01:07.993 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 19
+2025-09-01 19:01:07.995 | INFO     | logging:callHandlers:1737 - Returning 19 embedding results
+2025-09-01 19:01:08.001 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:01:08.003 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 19:01:08.025 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 19:01:08.026 | INFO     | logging:callHandlers:1737 - Stored batch 1: 19 embeddings
+2025-09-01 19:01:08.027 | INFO     | logging:callHandlers:1737 - Successfully stored 19 embeddings
+2025-09-01 19:01:08.034 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:01:15.333 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 19:01:15.340 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 19:01:15.360 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 19:04:22.827 | INFO     | core.logging:info:90 - Embedding request received for 19 documents with collection name: tint.edu.in
+2025-09-01 19:04:22.866 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 19:04:22.868 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 19:04:22.872 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 19:04:22.872 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:04:28.287 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 19:04:28.292 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:04:28.293 | INFO     | logging:callHandlers:1737 - Deleting existing collection: tint.edu.in
+2025-09-01 19:04:28.304 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:04:28.305 | INFO     | logging:callHandlers:1737 - Creating collection: tint.edu.in
+2025-09-01 19:04:28.457 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:04:28.458 | INFO     | logging:callHandlers:1737 - Successfully created collection: tint.edu.in
+2025-09-01 19:04:28.459 | INFO     | logging:callHandlers:1737 - Generating embeddings for 19 items locally
+2025-09-01 19:04:29.672 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 19
+2025-09-01 19:04:29.674 | INFO     | logging:callHandlers:1737 - Returning 19 embedding results
+2025-09-01 19:04:29.679 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:04:29.680 | INFO     | logging:callHandlers:1737 - Collection tint.edu.in already exists
+2025-09-01 19:04:29.708 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/tint.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 19:04:29.709 | INFO     | logging:callHandlers:1737 - Stored batch 1: 19 embeddings
+2025-09-01 19:04:29.710 | INFO     | logging:callHandlers:1737 - Successfully stored 19 embeddings
+2025-09-01 19:04:29.717 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:04:38.424 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 19:04:38.431 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 19:04:38.452 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 19:04:48.572 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 8474a4cc2c19493fb8c0050bccac6a2f
+2025-09-01 19:04:51.724 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 19:05:02.736 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 19:05:02.788 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 19:05:02.792 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 19:05:02.793 | INFO     | logging:callHandlers:1737 - Processing query: tell me about the college
+2025-09-01 19:05:02.837 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections/tint.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:05:02.845 | INFO     | logging:callHandlers:1737 - HTTP Request: POST http://127.0.0.1:6333/collections/tint.edu.in/points/search "HTTP/1.1 200 OK"
+2025-09-01 19:05:06.370 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 19:05:06.373 | INFO     | logging:callHandlers:1737 - Applying Cohere reranking to 10 sources
+2025-09-01 19:05:08.628 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-09-01 19:05:08.632 | INFO     | logging:callHandlers:1737 - Query completed with 5 sources
+2025-09-01 19:05:08.633 | INFO     | logging:callHandlers:1737 - Warning: DeprecationWarning: `search` method is deprecated and will be removed in the future. Use `query_points` instead.
+2025-09-01 19:24:04.408 | INFO     | core.logging:info:90 - Embedding request received for 31 documents with collection name: aot.edu.in
+2025-09-01 19:24:04.445 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 19:24:04.446 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 19:24:04.447 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 19:24:04.448 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:24:12.704 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 19:24:12.711 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:24:12.712 | INFO     | logging:callHandlers:1737 - Creating collection: aot.edu.in
+2025-09-01 19:24:12.830 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/aot.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:24:12.833 | INFO     | logging:callHandlers:1737 - Successfully created collection: aot.edu.in
+2025-09-01 19:24:12.834 | INFO     | logging:callHandlers:1737 - Generating embeddings for 31 items locally
+2025-09-01 19:24:15.053 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 31
+2025-09-01 19:24:15.056 | INFO     | logging:callHandlers:1737 - Returning 31 embedding results
+2025-09-01 19:24:15.065 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:24:15.067 | INFO     | logging:callHandlers:1737 - Collection aot.edu.in already exists
+2025-09-01 19:24:15.108 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/aot.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 19:24:15.110 | INFO     | logging:callHandlers:1737 - Stored batch 1: 31 embeddings
+2025-09-01 19:24:15.110 | INFO     | logging:callHandlers:1737 - Successfully stored 31 embeddings
+2025-09-01 19:24:15.116 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:24:21.060 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 19:24:21.069 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 19:24:21.085 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 19:25:52.562 | INFO     | core.logging:info:90 - Embedding request received for 7 documents with collection name: aot.edu.in
+2025-09-01 19:25:52.598 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 19:25:52.599 | INFO     | logging:callHandlers:1737 - Loading Hugging Face model locally: all-MiniLM-L6-v2
+2025-09-01 19:25:52.602 | INFO     | logging:callHandlers:1737 - Use pytorch device_name: cpu
+2025-09-01 19:25:52.606 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:26:01.152 | INFO     | logging:callHandlers:1737 - Successfully loaded model: all-MiniLM-L6-v2
+2025-09-01 19:26:01.159 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:26:01.161 | INFO     | logging:callHandlers:1737 - Deleting existing collection: aot.edu.in
+2025-09-01 19:26:01.169 | INFO     | logging:callHandlers:1737 - HTTP Request: DELETE http://127.0.0.1:6333/collections/aot.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:26:01.171 | INFO     | logging:callHandlers:1737 - Creating collection: aot.edu.in
+2025-09-01 19:26:01.616 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/aot.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:26:01.618 | INFO     | logging:callHandlers:1737 - Successfully created collection: aot.edu.in
+2025-09-01 19:26:01.619 | INFO     | logging:callHandlers:1737 - Generating embeddings for 7 items locally
+2025-09-01 19:26:02.130 | INFO     | logging:callHandlers:1737 - Generated embeddings, count: 7
+2025-09-01 19:26:02.131 | INFO     | logging:callHandlers:1737 - Returning 7 embedding results
+2025-09-01 19:26:02.138 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-09-01 19:26:02.140 | INFO     | logging:callHandlers:1737 - Collection aot.edu.in already exists
+2025-09-01 19:26:02.153 | INFO     | logging:callHandlers:1737 - HTTP Request: PUT http://127.0.0.1:6333/collections/aot.edu.in/points?wait=true "HTTP/1.1 200 OK"
+2025-09-01 19:26:02.159 | INFO     | logging:callHandlers:1737 - Stored batch 1: 7 embeddings
+2025-09-01 19:26:02.159 | INFO     | logging:callHandlers:1737 - Successfully stored 7 embeddings
+2025-09-01 19:26:02.166 | INFO     | logging:callHandlers:1737 - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-01 19:26:11.530 | INFO     | logging:callHandlers:1737 - Cohere reranker initialized successfully
+2025-09-01 19:26:11.538 | INFO     | core.logging:info:90 - Embedding completed successfully
+2025-09-01 19:26:11.556 | INFO     | logging:callHandlers:1737 - StreamableHTTP session manager started
+2025-09-01 19:26:20.340 | INFO     | logging:callHandlers:1737 - Created new transport with session ID: 98cf26e0398a4a508f39a3dc95a93901
+2025-09-01 19:26:22.555 | INFO     | logging:callHandlers:1737 - Processing request of type ListToolsRequest
+2025-09-01 19:26:29.074 | INFO     | logging:callHandlers:1737 - Processing request of type CallToolRequest
+2025-09-01 19:26:29.113 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2025-09-01 19:26:29.116 | INFO     | logging:callHandlers:1737 - Query engine initialized successfully
+2025-09-01 19:26:29.117 | INFO     | logging:callHandlers:1737 - Processing query: tell about aot
+2025-09-01 19:26:29.159 | INFO     | logging:callHandlers:1737 - HTTP Request: GET http://127.0.0.1:6333/collections/aot.edu.in "HTTP/1.1 200 OK"
+2025-09-01 19:26:29.168 | INFO     | logging:callHandlers:1737 - HTTP Request: POST http://127.0.0.1:6333/collections/aot.edu.in/points/search "HTTP/1.1 200 OK"
+2025-09-01 19:26:34.037 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-01 19:26:34.039 | INFO     | logging:callHandlers:1737 - Applying Cohere reranking to 7 sources
+2025-09-01 19:26:35.882 | INFO     | logging:callHandlers:1737 - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-09-01 19:26:35.885 | INFO     | logging:callHandlers:1737 - Query completed with 5 sources
+2025-09-01 19:26:35.886 | INFO     | logging:callHandlers:1737 - Warning: DeprecationWarning: `search` method is deprecated and will be removed in the future. Use `query_points` instead.
+2025-09-01 19:58:08.304 | INFO     | core.logging:info:90 - Starting web ingestion application
+2025-09-01 20:28:02.124 | INFO     | core.logging:info:140 - Starting web ingestion application
+2025-09-01 20:36:26.184 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 20:36:55.896 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 20:39:10.681 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:24.891 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:24.898 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:24.898 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:24.903 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:24.992 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:24.994 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:33:25.082 | INFO     | core.logging:info:140 - Health check requested
+2025-09-01 21:33:25.094 | INFO     | core.logging:info:140 - Ingestion request received for URL: https://example.com/
+2025-09-01 21:33:25.094 | INFO     | core.logging:info:140 - Ingestion completed successfully for URL: https://example.com/
+2025-09-01 21:33:25.122 | INFO     | core.logging:info:140 - Ingestion request received for URL: https://example.com/
+2025-09-01 21:33:25.122 | INFO     | core.logging:info:140 - Ingestion failed for URL: https://example.com/ with error: Test error
+2025-09-01 21:40:10.722 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:10.719 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:10.797 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:10.805 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:10.830 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:10.833 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:10.865 | INFO     | core.logging:info:140 - Health check requested
+2025-09-01 21:40:10.874 | INFO     | core.logging:info:140 - Ingestion request received for URL: https://example.com/
+2025-09-01 21:40:10.875 | INFO     | core.logging:info:140 - Ingestion completed successfully for URL: https://example.com/
+2025-09-01 21:40:10.877 | INFO     | core.logging:info:140 - Ingestion request received for URL: https://example.com/
+2025-09-01 21:40:10.877 | INFO     | core.logging:info:140 - Ingestion failed for URL: https://example.com/ with error: Test error
+2025-09-01 21:40:28.525 | INFO     | core.logging:info:140 - Starting pebblify
+2025-09-01 21:40:28.628 | INFO     | core.logging:info:140 - Health check requested
+2025-09-01 21:40:28.640 | INFO     | core.logging:info:140 - Ingestion request received for URL: https://example.com/
+2025-09-01 21:40:28.641 | INFO     | core.logging:info:140 - Ingestion completed successfully for URL: https://example.com/
+2025-09-01 21:40:28.655 | INFO     | core.logging:info:140 - Ingestion request received for URL: https://example.com/
+2025-09-01 21:40:28.655 | INFO     | core.logging:info:140 - Ingestion failed for URL: https://example.com/ with error: Test error

@@ -13,7 +13,7 @@ A comprehensive web scraping and vector database package that ingests web conten
 ## Prerequisites
 
 - Python 3.10 - 3.15
-- uv 
+- uv
 - OpenAi api key
 
 
@@ -70,7 +70,7 @@ uvicorn main:app --reload --port 8000
 
 Or using the Makefile:
 ```bash
-make run 
+make run
 ```
 
 The API will be available at `http://localhost:8000`.

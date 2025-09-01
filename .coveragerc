@@ -1,0 +1,18 @@
+[run]
+branch = True
+source =
+    core
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:
+
+omit =
+    core/providers/llamaindex_query_engine.py
+    core/providers/pgvector.py
+    core/providers/qdrant.py
+    core/providers/huggingface_embedding.py
+    core/services/scraper.py
+    core/services/mcp_server.py
+    core/mcp/site_server.py

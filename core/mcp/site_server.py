@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 import socket
-from typing import Any, Optional
+from typing import Any, Optional, Dict
 from urllib.parse import urlparse, urljoin
 
 import httpx
@@ -10,6 +11,8 @@ from fastmcp import FastMCP, Context
 
 from core.config.settings import AppSettings
 from core.embeddings.embedding import EmbeddingManager
+
+logger = logging.getLogger(__name__)
 
 
 def _hostname_from_url(url: str) -> str:
@@ -36,8 +39,9 @@ async def _discover_sitemaps(base_url: str) -> list[str]:
                 resp = await client.get(sitemap_url)
                 if resp.status_code == 200 and "<" in resp.text:
                     discovered.append(sitemap_url)
-            except Exception:
-                pass
+            except Exception as e:
+                # Non-fatal discovery error; continue with other paths
+                logger.debug("Sitemap discovery failed for %s: %s", sitemap_url, e)
         # robots.txt hints
         try:
             robots_url = urljoin(origin, "/robots.txt")
@@ -47,8 +51,8 @@ async def _discover_sitemaps(base_url: str) -> list[str]:
                     if line.lower().startswith("sitemap:"):
                         sm = line.split(":", 1)[1].strip()
                         discovered.append(sm)
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("robots.txt fetch failed for %s: %s", base_url, e)
     # dedupe
     return list(dict.fromkeys(discovered))
 
@@ -65,7 +69,9 @@ def spawn_site_mcp(site_url: str, base_config: AppSettings) -> dict[str, Any]:
     embed_mgr = EmbeddingManager(cfg)
 
     @mcp.tool
-    async def ask(question: str, top_k: int = 5, ctx: Context | None = None) -> dict[str, Any]:
+    async def ask(
+        question: str, top_k: int = 5, ctx: Context | None = None
+    ) -> dict[str, Any]:
         """Ask questions grounded on the site's embedded content in Qdrant."""
         if ctx:
             await ctx.info(f"Querying vector store for: {question}")
@@ -77,7 +83,7 @@ def spawn_site_mcp(site_url: str, base_config: AppSettings) -> dict[str, Any]:
         if ctx:
             await ctx.info("Discovering sitemaps and robots.txt")
         sitemaps = await _discover_sitemaps(site_url)
-        meta = {"site": site_url, "sitemaps": sitemaps}
+        meta: Dict[str, Any] = {"site": site_url, "sitemaps": sitemaps}
         # Try to fetch robots content briefly
         try:
             origin = f"{urlparse(site_url).scheme}://{urlparse(site_url).netloc}"

@@ -12,7 +12,9 @@ class EmbeddingProvider(ABC):
         self.config = config
 
     @abstractmethod
-    async def generate_embeddings(self, scraped_data: List[dict[str, Any]]) -> List[EmbeddingResult]:
+    async def generate_embeddings(
+        self, scraped_data: List[dict[str, Any]]
+    ) -> List[EmbeddingResult]:
         pass
 
     @abstractmethod

@@ -1,3 +1,5 @@
+"""Abstract interface for query engines used by the app."""
+
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
@@ -7,7 +9,10 @@ from core.config.settings import AppSettings
 
 
 class QueryEngineProvider(ABC):
+    """Base class for query engines (LLMs + vector search)."""
+
     def __init__(self, config: AppSettings):
+        """Initialize the provider with application settings."""
         self.config = config
 
     @abstractmethod
@@ -19,7 +24,8 @@ class QueryEngineProvider(ABC):
         include_sources: bool = True,
         filters: Optional[dict[str, Any]] = None,
     ) -> dict[str, Any]:
-        pass
+        """Run a semantic query and return an answer payload."""
+        raise NotImplementedError
 
     @abstractmethod
     async def similarity_search(
@@ -29,4 +35,5 @@ class QueryEngineProvider(ABC):
         similarity_threshold: float = 0.7,
         filters: Optional[dict[str, Any]] = None,
     ) -> List[dict[str, Any]]:
-        pass
+        """Return similar documents/chunks based on a text query."""
+        raise NotImplementedError

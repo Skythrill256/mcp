@@ -16,9 +16,9 @@ def test_ingest_request_valid():
         max_depth=3,
         include_external=True,
         keywords=["test", "example"],
-        url_patterns=["/test/*"]
+        url_patterns=["/test/*"],
     )
-    
+
     assert str(request.url) == "https://example.com/"
     assert request.recreate is True
     assert request.collection_prefix == "test"
@@ -32,7 +32,7 @@ def test_ingest_request_valid():
 def test_ingest_request_defaults():
     """Test that default values are correctly applied."""
     request = IngestRequest(url="https://example.com")
-    
+
     assert request.recreate is False
     assert request.collection_prefix == "site"
     assert request.max_pages is None
@@ -54,9 +54,9 @@ def test_ingest_response_creation():
         site="https://example.com",
         collection="test_collection",
         ingestion={"stored": {"count": 5}},
-        mcp={"host": "localhost", "port": 8000, "path": "/mcp"}
+        mcp={"host": "localhost", "port": 8000, "path": "/mcp"},
     )
-    
+
     assert response.site == "https://example.com"
     assert response.collection == "test_collection"
     assert response.ingestion == {"stored": {"count": 5}}
@@ -70,11 +70,11 @@ def test_embedding_result_to_node():
         embedding=[0.1, 0.2, 0.3],
         token_count=5,
         chunk_id="test_chunk_1",
-        metadata={"source": "test"}
+        metadata={"source": "test"},
     )
-    
+
     node = result.to_node()
-    
+
     assert isinstance(node, TextNode)
     assert node.text == "Test content"
     assert node.embedding == [0.1, 0.2, 0.3]

@@ -1,8 +1,8 @@
-write_endpoint: "pgvector"
+write_endpoint: "qdrant"
 
 endpoints:
   qdrant:
-  
+
     db_type: "qdrant"
 
     api_endpoint_env: "QDRANT_URL"

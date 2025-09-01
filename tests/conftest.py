@@ -14,10 +14,11 @@ def app_settings():
 def sample_ingest_request():
     """Create a sample IngestRequest for testing."""
     from core.models.ingestion import IngestRequest
+
     return IngestRequest(
         url="https://example.com",
         recreate=False,
         collection_prefix="test",
         max_pages=5,
-        max_depth=2
+        max_depth=2,
     )

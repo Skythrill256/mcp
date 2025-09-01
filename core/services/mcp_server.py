@@ -1,15 +1,25 @@
 from __future__ import annotations
 
 import asyncio
-from typing import Any
+from typing import Any, Optional, Dict
 from urllib.parse import urlparse, urljoin
 
 import httpx
 from fastmcp import FastMCP, Context
 
 from core.config.settings import AppSettings
-# Query engine is imported lazily inside the function to avoid heavy startup imports
 from core.utils.network import find_free_port, discover_sitemaps
+
+# Expose a patchable reference for the query engine; import may be heavy so keep optional
+try:  # pragma: no cover - import environment dependent
+    from ..providers.llamaindex_query_engine import (
+        LlamaIndexQueryEngine as _LlamaIndexQueryEngine,
+    )
+except Exception:  # pragma: no cover - optional dependency may be missing
+    _LlamaIndexQueryEngine = None  # type: ignore
+
+# Public alias that tests can patch: core.services.mcp_server.LlamaIndexQueryEngine
+LlamaIndexQueryEngine = _LlamaIndexQueryEngine  # type: ignore
 
 
 def _hostname_from_url(url: str) -> str:
@@ -17,25 +27,46 @@ def _hostname_from_url(url: str) -> str:
     return host or "site"
 
 
-async def spawn_site_mcp(site_url: str, base_config: AppSettings) -> dict[str, Any]:
+async def spawn_site_mcp(
+    site_url: str, base_config: AppSettings, collection_name: Optional[str] = None
+) -> dict[str, Any]:
     """Create and launch a FastMCP server for a given site.
 
     Returns dict with host, port, path, and server reference.
     """
-    cfg = base_config.for_site(site_url)
+    # Use the provided collection name if available, otherwise generate one
+    cfg = base_config.for_site(site_url, collection_name=collection_name)
     host_key = _hostname_from_url(site_url)
 
-    mcp = FastMCP(name=f"SiteMCP::{host_key}")
-    # Lazily import the query engine to avoid heavy imports at module import time
-    from ..providers.llamaindex_query_engine import LlamaIndexQueryEngine
-    query_engine = LlamaIndexQueryEngine(cfg)
+    mcp_name = (
+        f"SiteMCP::{collection_name}" if collection_name else f"SiteMCP::{host_key}"
+    )
+
+    mcp = FastMCP(name=mcp_name)
+    # Use patchable alias if available, else import lazily
+    engine_cls = LlamaIndexQueryEngine
+    if engine_cls is None:  # type: ignore[truthy-bool]
+        from ..providers.llamaindex_query_engine import (
+            LlamaIndexQueryEngine as _LlamaIndexQueryEngine2,
+        )
+
+        engine_cls = _LlamaIndexQueryEngine2
+
+    query_engine = engine_cls(cfg)  # type: ignore[misc]
 
     @mcp.tool
-    async def ask(question: str, top_k: int = 5, use_reranking: bool = True, ctx: Context | None = None) -> dict[str, Any]:
+    async def ask(
+        question: str,
+        top_k: int = 5,
+        use_reranking: bool = True,
+        ctx: Context | None = None,
+    ) -> dict[str, Any]:
         """Ask questions grounded on the site's embedded content in Qdrant."""
         if ctx:
             await ctx.info(f"Querying vector store for: {question}")
-        return await query_engine.query(question=question, top_k=top_k, use_reranking=use_reranking)
+        return await query_engine.query(
+            question=question, top_k=top_k, use_reranking=use_reranking
+        )
 
     @mcp.tool
     async def ask_metadata(ctx: Context | None = None) -> dict[str, Any]:
@@ -43,7 +74,7 @@ async def spawn_site_mcp(site_url: str, base_config: AppSettings) -> dict[str, A
         if ctx:
             await ctx.info("Discovering sitemaps and robots.txt")
         sitemaps = await discover_sitemaps(site_url)
-        meta = {"site": site_url, "sitemaps": sitemaps}
+        meta: Dict[str, Any] = {"site": site_url, "sitemaps": sitemaps}
         # Try to fetch robots content briefly
         try:
             origin = f"{urlparse(site_url).scheme}://{urlparse(site_url).netloc}"
@@ -67,7 +98,13 @@ async def spawn_site_mcp(site_url: str, base_config: AppSettings) -> dict[str, A
             path=path,
         )
 
-    asyncio.get_event_loop().create_task(_run_threaded())
+    loop = asyncio.get_event_loop()
+    # In tests, loop may be patched; use create_task if available else schedule via ensure_future
+    task_coro = _run_threaded()
+    if hasattr(loop, "create_task"):
+        loop.create_task(task_coro)
+    else:  # pragma: no cover - fallback path
+        asyncio.ensure_future(task_coro)
 
     return {
         "host": "127.0.0.1",

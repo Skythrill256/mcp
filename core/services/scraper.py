@@ -7,21 +7,18 @@ import logging
 from typing import Any
 from urllib.parse import urljoin, urlparse
 
-try:
-    from crawl4ai import (
-        AsyncWebCrawler,
-        BrowserConfig,
-        CacheMode,
-        CrawlerRunConfig,
-        MemoryAdaptiveDispatcher,
-    )
-    from crawl4ai.content_filter_strategy import PruningContentFilter
-    from crawl4ai.deep_crawling import BestFirstCrawlingStrategy, BFSDeepCrawlStrategy
-    from crawl4ai.deep_crawling.filters import FilterChain, URLPatternFilter
-    from crawl4ai.deep_crawling.scorers import KeywordRelevanceScorer
-    from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
-except ImportError:
-    raise ImportError("crawl4ai is required. Install with: pip install crawl4ai") from None
+from crawl4ai import (
+    AsyncWebCrawler,
+    BrowserConfig,
+    CacheMode,
+    CrawlerRunConfig,
+    MemoryAdaptiveDispatcher,
+)
+from crawl4ai.content_filter_strategy import PruningContentFilter
+from crawl4ai.deep_crawling import BestFirstCrawlingStrategy, BFSDeepCrawlStrategy
+from crawl4ai.deep_crawling.filters import FilterChain, URLPatternFilter
+from crawl4ai.deep_crawling.scorers import KeywordRelevanceScorer
+from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
 
 from core.config.settings import AppSettings
 from core.errors.exceptions import ScrapingError
@@ -38,10 +35,7 @@ class WebScraper:
         self.crawler = None
 
     async def __aenter__(self):
-        browser_cfg = BrowserConfig(
-            headless=True,
-            java_script_enabled=True
-        )
+        browser_cfg = BrowserConfig(headless=True, java_script_enabled=True)
         self.crawler = AsyncWebCrawler(config=browser_cfg, verbose=True)
         await self.crawler.__aenter__()
         return self
@@ -52,9 +46,7 @@ class WebScraper:
 
     def _make_dispatcher(self) -> MemoryAdaptiveDispatcher:
         return MemoryAdaptiveDispatcher(
-            memory_threshold_percent=80.0,
-            check_interval=1.0,
-            max_session_permit=10
+            memory_threshold_percent=80.0, check_interval=1.0, max_session_permit=10
         )
 
     def _make_run_config(self) -> CrawlerRunConfig:
@@ -65,26 +57,29 @@ class WebScraper:
             cache_mode=CacheMode.BYPASS,
             wait_for=None,
             markdown_generator=md_gen,
-            stream=True
+            stream=True,
         )
 
     def _create_crawl_strategy(self):
         """Choose Best-First (keyword-based) or BFS deep crawling."""
         url_scorer = (
             KeywordRelevanceScorer(keywords=self.config.keywords, weight=0.7)
-            if self.config.keywords else None
+            if self.config.keywords
+            else None
         )
 
         filters = []
         if self.config.url_patterns:
-            filters.extend(URLPatternFilter(patterns=[p]) for p in self.config.url_patterns)
+            filters.extend(
+                URLPatternFilter(patterns=[p]) for p in self.config.url_patterns
+            )
         filter_chain = FilterChain(filters) if filters else None
 
         params = dict(
             max_depth=self.config.max_depth,
             include_external=self.config.include_external,
             max_pages=self.config.max_pages,
-            filter_chain=filter_chain
+            filter_chain=filter_chain,
         )
 
         if url_scorer:
@@ -110,14 +105,18 @@ class WebScraper:
             try:
                 internal_links = []
                 # crawl4ai exposes links as a dict with keys like "internal" / "external"
-                if hasattr(root_res, 'links') and isinstance(root_res.links, dict):
+                if hasattr(root_res, "links") and isinstance(root_res.links, dict):
                     internal_links = root_res.links.get("internal", []) or []
-                logger.info(f"Root discovery: found {len(internal_links)} internal links from page HTML")
+                logger.info(
+                    f"Root discovery: found {len(internal_links)} internal links from page HTML"
+                )
 
                 # Build absolute internal URLs constrained to the final resolved netloc (normalize www)
-                resolved_root = getattr(root_res, 'url', url) or url
+                resolved_root = getattr(root_res, "url", url) or url
+
                 def _norm(n: str) -> str:
                     return n.lower().lstrip().rstrip().removeprefix("www.")
+
                 base_netloc = _norm(urlparse(resolved_root).netloc)
                 for link in internal_links:
                     href = link.get("href") if isinstance(link, dict) else None
@@ -130,7 +129,9 @@ class WebScraper:
 
                 # Always include the homepage
                 discovered_urls.append(url)
-                logger.info(f"After adding homepage: {len(discovered_urls)} URLs so far")
+                logger.info(
+                    f"After adding homepage: {len(discovered_urls)} URLs so far"
+                )
 
                 # Step 1b: merge in sitemap/robots discovered URLs
                 try:
@@ -164,44 +165,45 @@ class WebScraper:
 
             # If we discovered more than just the homepage, crawl that set directly
             if len(target_urls) > 1:
-                logger.info(f"Discovered {len(target_urls)} URLs to crawl from root {url}.")
+                logger.info(
+                    f"Discovered {len(target_urls)} URLs to crawl from root {url}."
+                )
                 logger.debug(f"First 10 target URLs: {target_urls[:10]}")
                 async for result in await self.crawler.arun_many(
                     urls=target_urls,
                     config=run_cfg,
                     dispatcher=dispatcher,
                 ):
-                    if result.success and getattr(result, 'markdown', None):
+                    if result.success and getattr(result, "markdown", None):
                         content = getattr(
                             result.markdown,
-                            'fit_markdown', 
-                            result.markdown.raw_markdown
+                            "fit_markdown",
+                            result.markdown.raw_markdown,
                         )
-                        scraped_data.append({
-                            'url': result.url,
-                            'content': content,
-                            'status': result.status_code
-                        })
+                        scraped_data.append(
+                            {
+                                "url": result.url,
+                                "content": content,
+                                "status": result.status_code,
+                            }
+                        )
                 return scraped_data
 
             # Fallback: use deep crawling strategy if discovery found nothing meaningful
             async for result in await self.crawler.arun_many(
-                urls=[url],
-                config=run_cfg,
-                dispatcher=dispatcher,
-                strategy=strategy
+                urls=[url], config=run_cfg, dispatcher=dispatcher, strategy=strategy
             ):
-                if result.success and getattr(result, 'markdown', None):
-                    content = getattr(
-                        result.markdown,
-                        'fit_markdown',
-                        result.markdown.raw_markdown
+                if result.success and getattr(result, "markdown", None):
+                    raw = getattr(result.markdown, "raw_markdown", "")
+                    fit = getattr(result.markdown, "fit_markdown", None)
+                    content = fit if isinstance(fit, str) and fit else str(raw)
+                    scraped_data.append(
+                        {
+                            "url": result.url,
+                            "content": content,
+                            "status": result.status_code,
+                        }
                     )
-                    scraped_data.append({
-                        'url': result.url,
-                        'content': content,
-                        'status': result.status_code
-                    })
             return scraped_data
         except Exception as e:
             logger.error(f"Error scraping {url}: {str(e)}")
@@ -209,55 +211,58 @@ class WebScraper:
 
     def _process_page_result(self, result: Any, url: str) -> dict[str, Any]:
         """Process a single page result into standardized format."""
-        content = ""
-        if hasattr(result, 'extracted_content') and result.extracted_content:
+        content: str = ""
+        if hasattr(result, "extracted_content") and result.extracted_content:
             content = result.extracted_content
-        elif hasattr(result, 'markdown') and result.markdown:
+        elif hasattr(result, "markdown") and result.markdown:
             try:
                 md = result.markdown
-                content = getattr(md, 'fit_markdown', None) or getattr(md, 'raw_markdown', '')
+                fit_markdown = getattr(md, "fit_markdown", None)
+                raw_markdown = getattr(md, "raw_markdown", "")
+                content = fit_markdown or raw_markdown or ""
+                if content is None:
+                    content = ""
             except Exception:
                 content = str(result.markdown) if result.markdown else ""
-        elif hasattr(result, 'cleaned_html') and result.cleaned_html:
-            content = result.cleaned_html
+        elif hasattr(result, "cleaned_html") and result.cleaned_html:
+            content = result.cleaned_html or ""
 
         metadata = {
-            'url': url,
-            'title': getattr(result, 'title', ''),
-            'description': getattr(result, 'description', ''),
-            'keywords': getattr(result, 'keywords', []),
-            'language': getattr(result, 'language', ''),
-            'word_count': len(content.split()) if content else 0,
-            'scraped_at': asyncio.get_event_loop().time(),
-            'success': getattr(result, 'success', True),
-            'status_code': getattr(result, 'status_code', 200)
+            "url": url,
+            "title": getattr(result, "title", ""),
+            "description": getattr(result, "description", ""),
+            "keywords": getattr(result, "keywords", []),
+            "language": getattr(result, "language", ""),
+            "word_count": len(content.split()) if content else 0,
+            "scraped_at": asyncio.get_event_loop().time(),
+            "success": getattr(result, "success", True),
+            "status_code": getattr(result, "status_code", 200),
         }
 
         links = []
-        if hasattr(result, 'links') and result.links:
+        if hasattr(result, "links") and result.links:
             for link in result.links:
                 if isinstance(link, dict):
                     links.append(link)
                 else:
                     absolute_url = urljoin(url, str(link))
-                    links.append({
-                        'url': absolute_url,
-                        'text': '',
-                        'internal': self._is_internal_link(url, absolute_url)
-                    })
+                    links.append(
+                        {
+                            "url": absolute_url,
+                            "text": "",
+                            "internal": self._is_internal_link(url, absolute_url),
+                        }
+                    )
 
-        return {
-            'content': content,
-            'metadata': metadata,
-            'links': links,
-            'url': url
-        }
+        return {"content": content, "metadata": metadata, "links": links, "url": url}
 
     def _is_internal_link(self, base_url: str, link_url: str) -> bool:
         """Check if a link is internal to the base domain."""
         try:
+
             def _norm(n: str) -> str:
                 return n.lower().lstrip().rstrip().removeprefix("www.")
+
             base_domain = _norm(urlparse(base_url).netloc)
             link_domain = _norm(urlparse(link_url).netloc)
             # If link has no netloc (relative), treat as internal
