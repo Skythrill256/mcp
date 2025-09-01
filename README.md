@@ -1,4 +1,4 @@
-# Pebbling Crawl
+# Pebblify
 
 A comprehensive web scraping and vector database package that ingests web content and stores it in vector databases for AI applications.
 
