@@ -157,7 +157,7 @@ make bandit
 ## Project Structure
 
 ```
-pebbling-crawl/
+pebblify/
 ├── core/                 # Core application logic
 │   ├── config/           # Configuration files and settings
 │   ├── embeddings/       # Embedding model integrations
