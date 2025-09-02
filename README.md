@@ -23,7 +23,7 @@ A comprehensive web scraping and vector database package that ingests web conten
 
 ```bash
 git clone <repository-url>
-cd pebbling-crawl
+cd <repository-url>
 ```
 
 
@@ -154,15 +154,6 @@ make pydocstyle
 make bandit
 ```
 
-### Pre-commit Hooks (Optional)
-
-Set up pre-commit hooks to automatically run checks before committing:
-
-```bash
-pip install pre-commit
-pre-commit install
-```
-
 ## Project Structure
 
 ```
@@ -198,6 +189,3 @@ pebbling-crawl/
 6. Push to the branch
 7. Create a pull request
 
-## License
-
-[Add your license information here]
