@@ -9,7 +9,10 @@ def test_app_settings_defaults():
 
     # Test database defaults
     # Note: The actual value may be different due to environment variables
-    assert "postgresql://" in settings.postgres_connection_string
+    # Accept both sync and asyncpg PostgreSQL URI schemes
+    assert settings.postgres_connection_string.startswith(
+        ("postgresql://", "postgresql+asyncpg://")
+    )
     # qdrant_url can be set via environment variable, so just check it's a string or None
     assert settings.qdrant_url is None or isinstance(settings.qdrant_url, str)
     assert settings.collection_name == "web_vectors"
